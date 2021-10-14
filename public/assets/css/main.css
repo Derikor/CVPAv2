@@ -93,6 +93,62 @@ input, select, textarea {
 	.fondoima2{
 		background-image: url("../../images/azul.jpg");
 	}
+	.fondoima3{
+		background-image: url("../../images/fonne.jpg");
+	}
+	.fondoima4{
+		background-image: url("../../images/foneaz.jpg");
+	}
+	.fondogif{
+		background-image: url("../../images/imagif.gif");
+	}
+	.icon{
+		background-image: url("../../images/lupa.png");
+	}
+
+
+	.buscar{
+		display: flex;
+		position: absolute;
+		justify-content: center;
+		align-items: center;
+		background: #069;
+		padding: 20px;
+		height: 80px;
+		left: 50%;
+		transform: translate(-50%);
+		-webkit-transform: translate(-50%);
+		-moz-transform: translate(-50%);
+		-ms-transform: translate(-50%);
+		-o-transform: translate(-50%);
+		border-radius: 40px;
+		-webkit-border-radius: 40px;
+		-moz-border-radius: 40px;
+		-ms-border-radius: 40px;
+		-o-border-radius: 40px;
+}
+.btex{
+	bottom: none;
+	background: none;
+	outline: none;
+	color: white;
+	font-size: 30px;
+	float: left;
+	line-height: 40px;
+}
+.bticon{
+	width: 40px;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+}
+.bticon:hover{
+	color: black;
+}
+
 
 	body {
 		background: #f0f4f4;
@@ -123,7 +179,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
-		color: #483949;
+		color: white;
 		line-height: 1.25em;
 	}
 
@@ -2188,7 +2244,7 @@ input, select, textarea {
 
 	#header {
 		position: relative;
-		background-image: url("../../images/azul.jpg");
+		background-image: url("../../images/formfon.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -2548,7 +2604,6 @@ input, select, textarea {
 				-o-transition: background-color 0.35s ease-in-out;
 				-ms-transition: background-color 0.35s ease-in-out;
 				transition: background-color 0.35s ease-in-out;
-				-webkit-backface-visibility: hidden;
 			}
 
 			.carousel .forward:after, .carousel .backward:after {

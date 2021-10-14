@@ -28,34 +28,49 @@
     <!-- Nav -->
     <nav id="nav">
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="personal.html">Registro del personal</a></li>
-        <li><a href="/reportper">Administracion del Personal</a></li>
+        <li><a href="index.html"> <h3>INICIO</h3></a></li>
+        <li><a href="personal.html"><h3>REGISTRO DEL PERSONAL</h3></a></li>
+        <li><a href="/reportper"><h3>ADMINISTRACIÓN DEL PERSONAL</h3></a></li>
       </ul>
     </nav>
 
   </div>
 
 
-  <div class="col-md-15">
+  <div class="container col-md-15 table-responsive">
+    <div class="input-group mb-3">
+      <div class="buscar">
+        <h3>Buscar por Fecha</h3>&nbsp;&nbsp;&nbsp;
+        <form action="/busca" method="post">
+            <input type="date" placeholder="Buscar" name="date" id="date">
+            <a href="" class="bticon"><i class="fas fa-search"></i></a>
+        </form>
+      </div>
+    </div>
+      <br>
+      <br>
+      <br>
     <table class="table table-bordered table-hover">
       <thead>
         <tr>
-          <th>N°</th>
-          <th class="col-md-5">Mensaje</th>
-          <th>Fecha</th>
-          <th>operacion</th>
-        </tr>
-        <tr>
-          <th>1</th>
-          <th class="col-md-5">Hola buenos dias</th>
-          <th>21-09-2021</th>
-          <th></th>
+          <th class="table-primary">N°</th>
+          <th class="table-primary col-md-5">Mensaje</th>
+          <th class="table-primary">Fecha</th>
+          <th class="table-primary">operacion</th>
         </tr>
       </thead>
       <tbody>
-
-      </tbody>
+        <% for( var i = 0; i < men.length; i++ ) { %>
+           <tr>
+               <td><%= i+1 %> </td>
+               <td><%= men[i].mensaje %> </td>
+               <td><%= men[i].date %> </td>
+               <td>
+                   <a href="/elimi/<%= men[i]._id %>" class="btn btn-danger">Eliminar</a>
+               </td>
+           </tr>
+        <% } %>
+    </tbody>
     </table>
   </div>
 
@@ -73,7 +88,7 @@
             <p>No dude en consultar a nuestro asistente virtual en las siguientes plataformas</p>
             <ul class="icons">
 
-              <li><a href="chat.html" class="icon brands fa-reddit"><span class="label">WebMessenger</span></a></li>
+              <li><a href="/chat" class="icon brands fa-reddit"><span class="label">WebMessenger</span></a></li>
             </ul>
           </section>
 

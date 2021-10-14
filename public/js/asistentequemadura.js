@@ -93,15 +93,27 @@ setTimeout(function(){// Esperar 250ms para inicializar
          }
     },
     {
-        indexes: ['abrir google','abrir youtube'],
+        indexes: ['volver al inicio','abrir quemaduras','abrir hemorragias','abrir heridas','hablar con el asistente','conversar con asistente'],
         action: function(i){
             if (i==0){
-                artyom.say("abriendo google"); 
-                window.open("https://www.google.com/",'_blank');
+                artyom.say("volviendo a la ventana principal",{lang:"es-ES"}); 
+                window.open("index.html",'_top');
+            }
+            if (i==1){
+                artyom.say("abriendo ventana de quemaduras",{lang:"es-ES"});   
+                window.open("quemadura.html",'_top');
             }
             if (i==2){
-                artyom.say("abriendo youtube");   
-                window.open("https://www.youtube.com/");
+                artyom.say("abriendo ventana de hemorragias",{lang:"es-ES"});   
+                window.open("hemorragia.html",'_top');
+            }
+            if (i==3){
+                artyom.say("abriendo ventana de heridas",{lang:"es-ES"});   
+                window.open("herida.html",'_top');
+            }
+            if (i==4 || i==5){
+                artyom.say("abriendo ventana de asistente",{lang:"es-ES"});   
+                window.open("/chat",'_top');
             }
          }
     },

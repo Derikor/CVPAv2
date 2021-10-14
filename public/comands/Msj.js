@@ -31,7 +31,6 @@ mensaje.save((err, mensajeStored) =>{
 });
 }
 
-
 function updatemsj (req,res){
     let productid = req.params.productid
     let update = req.body
@@ -58,5 +57,6 @@ module.exports = {
     getmsjid,
     savemsj,
     updatemsj,
-    deletemsj
+    deletemsj,
+
 }

@@ -1,6 +1,7 @@
 const express = require('express');
 const mjscomands = require('./public/comands/Msj')
 const reg = require('./public/models/horario_especialidad')
+const m = require('./public/models/User_Message')
 const router = express.Router();
 
 // rutas 
@@ -35,13 +36,31 @@ router.get('/eliminar/:id', async (req, res)=>{
 router.get('/chat', (req, res)=>{
     res.render('asistente');
 });
+
 router.post('/addmen', async (req, res)=>{
-    var mensaje = $('#salida').val();
-    const savmen = new reg();
-    savmen.title = 'mensaje de usuario'
-    savmen.mensaje = mensaje
-    await savmen.save();
-    console.log('mensaje guardado');
+    const savm = new m();
+        savm.title ="Mensaje de Usuario",
+        savm.mensaje = req.body.mensaje
+    await savm.save();
+    res.redirect('/chat');
+});
+router.get('/reportmen', async (req, res)=>{
+    const men = await m.find();
+    res.render('msjusuarios',{
+        men:men
+    });
+});
+router.get('/elimi/:id', async (req, res)=>{
+    const { id } = req.params;
+    await m.remove({_id: id});
+    res.redirect('/reportmen');
+});
+router.get('/busca:id', async (req, res)=>{
+    const { date } = req.params;
+    const busc = await m.findById(date);
+    res.render('buscafecha',{
+        busc
+    });
 });
 
 
