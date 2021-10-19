@@ -173,6 +173,14 @@ setTimeout(function(){// Esperar 250ms para inicializar
          }
     },
     {
+        indexes: ['alto','detente','silencio','stop'],
+        action: function(i){
+            if (i==0 || i==1 || i==2 || i==3){
+                artyom.shutUp() 
+            }
+         }
+    },
+    {
         indexes: ['volver al inicio','abrir quemaduras','abrir hemorragias','abrir heridas','hablar con el asistente','conversar con asistente'],
         action: function(i){
             if (i==0){

@@ -289,13 +289,10 @@ setTimeout(function(){// Esperar 250ms para inicializar
          }
     },
     {
-        indexes: ['Hola','buen dia'],
+        indexes: ['alto','detente','silencio','stop'],
         action: function(i){
-            if (i==0){
-                artyom.say("Hola que tal");   
-            }
-            if (i==2){
-                artyom.say("Hola, buenos dias");   
+            if (i==0 || i==1 || i==2 || i==3){
+                artyom.shutUp() 
             }
          }
     },

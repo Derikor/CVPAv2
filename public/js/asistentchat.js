@@ -42,6 +42,14 @@ artyom.addCommands([
          }
     },
     {
+        indexes: ['alto','detente','silencio','stop'],
+        action: function(i){
+            if (i==0 || i==1 || i==2 || i==3){
+                artyom.shutUp() 
+            }
+         }
+    },
+    {
         indexes: ['volver al inicio','abrir quemaduras','abrir hemorragias','abrir heridas','iniciar sesión','inicio de sesión'],
         action: function(i){
             if (i==0){
