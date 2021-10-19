@@ -148,7 +148,10 @@ input, select, textarea {
 .bticon:hover{
 	color: black;
 }
-
+.mapa{
+	width: 580px;
+	height: 450px;
+}
 
 	body {
 		background: #f0f4f4;
@@ -3206,5 +3209,10 @@ input, select, textarea {
 					.carousel article .image {
 						margin-bottom: 2em;
 					}
+		/*mapa*/
+		.mapa{
+			width: 410px;
+	        height: 400px;
+		}
 
 	}
