@@ -12,7 +12,7 @@
 		<script src="assets/js/artyom.window.js"></script>
 		<script src="assets/js/artyom.window.min.js"></script>
 </head>
-<body class="fondoima">
+<body class="fondoima2">
 
   <div id="header">
 
@@ -20,15 +20,17 @@
       <div class="inner">
         <header>
           <h1><a href="index.html" id="logo">REALIZA UNA CONSULTA</a></h1>
+          <hr>
+          <label for="leer"><input type="button" id="emp" class="bg-primary" onclick="start()" value="Consultar"></label> 
         </header>
       </div>
 
     <!-- Nav -->
     <nav id="nav">
         <ul>
-            <li><a href="index.html" id="inicio"><h3 class="clores">Inicio</h3></a></li>
+            <li><a href="index.html" id="inicio"><h3 class="clores">INICIO</h3></a></li>
             <li>
-                <a href="#" id="primaux"><h3 class="clores">Primeros Auxilios</h3></a>
+                <a href="#" id="primaux"><h3 class="clores">PRIMEROS AUXILIOS</h3></a>
                 <ul id="subpa">
                     <li id="definicion"><a href="index.html#leepa" >Definición</a></li>
                     <li id="heridas"><a href="herida.html" >Heridas</a></li>
@@ -37,26 +39,32 @@
                 </ul>
             </li>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <li><a href="login.html"id="inisesion"><h3 class="clores">Inicio de Sesión Centro de Salud</h3></a></li>
+            <li><a href="login.html"id="inisesion"><h3 class="clores">INICIO DE SESÍON CENTRO DE SALUD</h3></a></li>
         </ul>
     </nav>
-
-    <div>
-      <label for="leer"><input type="button" id="emp" class="bg-primary" onclick="start()" value="Consultar"></label> 
-  </div>
-  <br>
-  <div class="container w-50">
-    <form action="/addmen" id="con" method="post">
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" name="mensaje" id="salida" onkeypress="enter(event)">
-        <button type="submit" class="bg-primary" id="sub">Enviar</button>
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-3 col-12-mobile">
+          <img src="../images/asisgif.gif" class="img-fluid invi" alt="">
+        </div>
+          <div class="col-6 col-12-mobile row">
+            <br>
+              <form action="/addmen" id="con" method="post">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" name="mensaje" id="salida" onkeypress="enter(event)">
+                  <button type="submit" class="bg-primary" id="sub">Enviar</button>
+                </div>
+                  <br>
+                  <p> <textarea  id="entrada" cols="100" rows="10" readonly></textarea> </p>
+              </form>   
+          </div>
+        <div class="col-3 col-12-mobile">
+          <img src="../images/asisgif.gif" class="img-fluid" alt="">
+        </div>
       </div>
-        <br>
-        <p> <textarea id="entrada" cols="100" rows="10" readonly></textarea> </p>
-    </form>   
-  </div>
-  </div>
-
+    </div>
+</div>
   
 
 <!-- Scripts -->

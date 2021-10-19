@@ -113,17 +113,17 @@ artyom.addCommands([
          }
     },
     {
-        indexes: ['tipos de heridas','heridas por incisión','que es una hemorragia interna','qué son las hemorragias externas','que es una hemorragia interna','qué hacer en caso de una herida','qué hago en caso de una herida','qué hago en caso de una herida contusa','qué hago en caso de una herida por golpe','qué hago en caso de un golpe','golpe'],
+        indexes: ['tipos de heridas','heridas por incisión','herida por incisión','heridas por contusión','herida por contusión','qué hacer en caso de una herida','qué hago en caso de una herida','qué hago en caso de una herida contusa','qué hago en caso de una herida por golpe','qué hago en caso de un golpe','golpe'],
         action: function(i){
             if (i==0){
                 artyom.say("existen diferentes tipos de heridas entre las cuales tenemos",{lang:"es-ES"});
                 artyom.say("heridas: por incisión, por contusión, superficiales, por su profundidad, y por excoriación",{lang:"es-ES"});   
             }
-            if (i==1){
+            if (i==1 || i==2){
                 artyom.say("causadas por objetos afilados que generan daño en la piel",{lang:"es-ES"});   
             }
             if (i==3 || i==4){
-                artyom.say("hemorragias externas, son producidas por la salida de sangre al exterior a través de la piel producidas por heridas abiertas o por orificios del cuerpo, ya sean por la nariz, boca, ano, meato urinario y oidos",{lang:"es-ES"});   
+                artyom.say("Son lesiones que aparecen cuando se produce un golpe, caída o cualquier impacto sobre la piel, sin ocasionar heridas abiertas. Es necesario prestar atención, porque pueden ocasionar daños en los músculos, tendones e incluso órganos, dando como resultado hemorragias internas",{lang:"es-ES"});   
             }
             if (i==5 || i==6){
                 artyom.say("En caso de una herida",{lang:"es-ES"});

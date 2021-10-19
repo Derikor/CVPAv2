@@ -3205,5 +3205,13 @@ input, select, textarea {
 					.carousel article .image {
 						margin-bottom: 2em;
 					}
+		.invi{
+			opacity: 0;
+			position: absolute;
+		}
+		.areas{
+			clip-path: polygon(0% 0%, 100% 0%, 100% 81%, 70% 100%, 78% 84%, 0 85%);
+		}
+
 	
 	}
