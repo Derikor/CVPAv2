@@ -11,7 +11,9 @@ $('#primaux').mouseover(function(){artyom.say("Primeros Auxilios")})
     $('li#hemorragias').mouseout(function(){artyom.shutUp()})
 $('#conversar').mouseover(function(){artyom.say("conversar con asistente virtual")})
 $('#leequema').mouseover(function(){artyom.say("Leer el contenido de quemadura")})
-
+$('#q1').mouseover(function(){artyom.say("quemaduras",{lang:"es-ES"})})
+$('#q1').mouseout(function(){artyom.shutUp()})
+$('#sil1').mouseout(function(){artyom.shutUp()})
 
 $('#leequema').click(function (e) {
     e.preventDefault();
@@ -39,11 +41,89 @@ $('#leequema').click(function (e) {
     }
 });
 
+//lee las secciones
+$('#lee1').click(function (e) {
+    e.preventDefault();
+    var a = $('#lee1t').text();
+    var b = $('#lee1p').text();
+    if (artyom.speechSupported()) {
+        artyom.say(a,{
+            onStart:function(){
+                console.log("Comenzando a leer texto");
+            },
+            onEnd:function(){
+                console.log("Texto leido satisfactoriamente");
+            }
+        })
+        artyom.say(b,{
+            onStart:function(){
+                console.log("Comenzando a leer texto");
+            },
+            onEnd:function(){
+                console.log("Texto leido satisfactoriamente");
+            }
+        })
+    } else {
+        alert("Tu Navegador no puede hablar");
+    }
+});
+$('#lee2').click(function (e) {
+    e.preventDefault();
+    var a = $('#lee2t').text();
+    var b = $('#lee2p').text();
+    if (artyom.speechSupported()) {
+        artyom.say(a,{
+            onStart:function(){
+                console.log("Comenzando a leer texto");
+            },
+            onEnd:function(){
+                console.log("Texto leido satisfactoriamente");
+            }
+        })
+        artyom.say(b,{
+            onStart:function(){
+                console.log("Comenzando a leer texto");
+            },
+            onEnd:function(){
+                console.log("Texto leido satisfactoriamente");
+            }
+        })
+    } else {
+        alert("Tu Navegador no puede hablar");
+    }
+});
+$('#lee3').click(function (e) {
+    e.preventDefault();
+    var a = $('#lee3t').text();
+    var b = $('#lee3p').text();
+    if (artyom.speechSupported()) {
+        artyom.say(a,{
+            onStart:function(){
+                console.log("Comenzando a leer texto");
+            },
+            onEnd:function(){
+                console.log("Texto leido satisfactoriamente");
+            }
+        })
+        artyom.say(b,{
+            onStart:function(){
+                console.log("Comenzando a leer texto");
+            },
+            onEnd:function(){
+                console.log("Texto leido satisfactoriamente");
+            }
+        })
+    } else {
+        alert("Tu Navegador no puede hablar");
+    }
+});
+
 artyom.fatality();// Detener cualquier instancia previa
 setTimeout(function(){// Esperar 250ms para inicializar
     artyom.initialize({
        lang: "es-ES",// Más lenguajes son soportados
        continuous:true,// Artyom obedecera por siempre
+       executionKeyword: "y",
        listen:true, // Iniciar !
        debug:true, // Muestra un informe en la consola
        speed:1 // Habla normalmente
@@ -118,9 +198,90 @@ setTimeout(function(){// Esperar 250ms para inicializar
          }
     },
     {
-        indexes: ['limpiar'],
-        action: function(){
-          $('#salida').val('');
+        indexes: ['leer quemaduras de primer grado','léeme los quemaduras de primer grado','le quemaduras de primer grado','léeme quemaduras de primer grado','léemelo quemaduras de primer grado'],
+        action: function(i){
+            if (i==0 || i==1 || i==2 || i==3 || i==4){
+                    var a = $('#lee1t').text();
+                    var b = $('#lee1p').text();
+                    if (artyom.speechSupported()) {
+                        artyom.say(a,{
+                            onStart:function(){
+                                console.log("Comenzando a leer texto");
+                            },
+                            onEnd:function(){
+                                console.log("Texto leido satisfactoriamente");
+                            }
+                        })
+                        artyom.say(b,{
+                            onStart:function(){
+                                console.log("Comenzando a leer texto");
+                            },
+                            onEnd:function(){
+                                console.log("Texto leido satisfactoriamente");
+                            }
+                        });
+                    } else {
+                        alert("Tu Navegador no puede hablar");
+                    }
+            }
          }
-    },   
+    },
+    {
+        indexes: ['leer quemaduras de segundo grado','léeme los quemaduras de segundo grado','le quemaduras de segundo grado','léeme quemaduras de segundo grado','léemelo quemaduras de segundo grado'],
+        action: function(i){
+            if (i==0 || i==1 || i==2 || i==3 || i==4){
+                    var a = $('#lee2t').text();
+                    var b = $('#lee2p').text();
+                    if (artyom.speechSupported()) {
+                        artyom.say(a,{
+                            onStart:function(){
+                                console.log("Comenzando a leer texto");
+                            },
+                            onEnd:function(){
+                                console.log("Texto leido satisfactoriamente");
+                            }
+                        })
+                        artyom.say(b,{
+                            onStart:function(){
+                                console.log("Comenzando a leer texto");
+                            },
+                            onEnd:function(){
+                                console.log("Texto leido satisfactoriamente");
+                            }
+                        });
+                    } else {
+                        alert("Tu Navegador no puede hablar");
+                    }
+            }
+         }
+    },
+    {
+        indexes: ['leer quemaduras de tercer grado','léeme los quemaduras de tercer grado','le quemaduras de tercer grado','léeme quemaduras de tercer grado','léemelo quemaduras de tercer grado'],
+        action: function(i){
+            if (i==0 || i==1 || i==2 || i==3 || i==4){
+                    var a = $('#lee3t').text();
+                    var b = $('#lee3p').text();
+                    if (artyom.speechSupported()) {
+                        artyom.say(a,{
+                            onStart:function(){
+                                console.log("Comenzando a leer texto");
+                            },
+                            onEnd:function(){
+                                console.log("Texto leido satisfactoriamente");
+                            }
+                        })
+                        artyom.say(b,{
+                            onStart:function(){
+                                console.log("Comenzando a leer texto");
+                            },
+                            onEnd:function(){
+                                console.log("Texto leido satisfactoriamente");
+                            }
+                        });
+                    } else {
+                        alert("Tu Navegador no puede hablar");
+                    }
+            }
+         }
+    },
  ]);

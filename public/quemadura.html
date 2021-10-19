@@ -14,7 +14,7 @@
 		<script src="assets/js/artyom.window.js"></script>
 		<script src="assets/js/artyom.window.min.js"></script>
 	</head>
-	<body class="no-sidebar is-preload">
+	<body class="">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -30,16 +30,16 @@
 					<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html" id="inicio"><h3>Inicio</h3></a></li>
+							<li><a href="index.html" id="inicio"><h3 class="clores">INICIO</h3></a></li>
 							<li>
-								<a href="#" id="primaux"><h3>Primeros Auxilios</h3></a>
+								<a href="#" id="primaux"><h3 class="clores">PRIMEROS AUXILIOS</h3></a>
 								<ul id="subpa">
 									<li id="definicion"><a href="index.html#leepa" onclick="start()">Definición</a></li>
 									<li id="heridas"><a href="herida.html" >Heridas</a></li>
 									<li id="hemorragias"><a href="hemorragia.html" >Hemorragias</a></li>
 								</ul>
 							</li>
-							<li><a href="chat.html" id="conversar"><h3>Conversar con Asistente</h3></a></li>
+							<li><a href="/chat" id="conversar"><h3 class="clores">CONVERSAR CON ASISTENTE</h3></a></li>
 						</ul>
 					</nav>
 
@@ -52,7 +52,7 @@
 					
 						<article id="main" class="special">
 							<header>
-								<h2><a href="#">QUEMADURAS</a></h2>
+								<h2 id="q1"><a href="#">QUEMADURAS</a></h2>
 							</header>
 									<a href="#" class="image featured"><img src="images/collagequemadura.jpg" alt="" /></a>
 									<header>
@@ -65,39 +65,42 @@
 
 							<section>
 								<header>
-									<h3>Clasificacion de las Quemadurass</h3>
+									<h3>Clasificacion de las Quemaduras</h3>
 								</header>
 								<p id="clasquema">
 								Las Quemaduras pueden clasificarse por su nivel de grado que son: de primer grado, de segundo grado, y de tercer grado.
 								</p>
 							</section>
 						</article>
-						<hr />
+						<hr id="sil1">
 						<div class="row">
 							<article class="col-4 col-12-mobile special">
 								<a href="#" class="image featured"><img src="images/primergrado.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Quemaduras de Primer Grado</a></h3>
+									<input type="button" id="lee1" class="bg-primary" value="Leer">
+									<h3 id="lee1t"><a href="#">Quemaduras de Primer Grado</a></h3>
 								</header>
-								<p>
+								<p id="lee1p">
 									Son aquellas que afectan solo la capa externa de la piel. Causan dolor, enrojecimiento e hinchazón, debido a contactos ligeros con objetos caliente.
 								</p>
 							</article>
 							<article class="col-4 col-12-mobile special">
 								<a href="#" class="image featured"><img src="images/segundogrado.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Quemaduras de Segundo Grado</a></h3>
+									<input type="button" id="lee2" class="bg-primary" value="Leer">
+									<h3 id="lee2t"><a href="#">Quemaduras de Segundo Grado</a></h3>
 								</header>
-								<p>
+								<p id="lee2p">
 								    Las quemaduras de segundo grado afectan ambas capas, la capa externa y la capa subyacente de la piel. Causan dolor, enrojecimiento, hinchazón y ampollas. También se llaman quemaduras de espesor parcial.
 								</p>
 							</article>
 							<article class="col-4 col-12-mobile special">
 								<a href="#" class="image featured"><img src="images/tercergrado.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Quemaduras de Tercer Grado</a></h3>
+									<input type="button" id="lee3" class="bg-primary" value="Leer">
+									<h3 id="lee3t"><a href="#">Quemaduras de Tercer Grado</a></h3>
 								</header>
-								<p>
+								<p id="lee3p">
 									 Las quemaduras de tercer grado afectan las capas profundas de la piel, y también se llaman quemaduras de espesor total. Causan piel blanquecina, oscura o quemada. La piel puede estar adormecida, se debe a las llamas o contacto con la electricidad, mucho depende del tiempo en el que se expone.
 								</p>
 							</article>

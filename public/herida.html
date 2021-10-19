@@ -2,12 +2,16 @@
 <html>
 	<head>
 		<title>heridas</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="assets/js/artyom.js"></script>
+		<script src="assets/js/artyom.window.js"></script>
+		<script src="assets/js/artyom.window.min.js"></script>
 	</head>
-	<body class="no-sidebar is-preload">
+	<body class="">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -23,17 +27,16 @@
 					<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html"><h3>Inicio</h3></a></li>
+							<li><a href="index.html" id="inicio"><h3 class="clores">INICIO</h3></a></li>
 							<li>
-								<a href="#"><h3>Primeros Auxilios</h3></a>
+								<a href="#" id="primaux"><h3 class="clores">PRIMEROS AUXILIOS</h3></a>
 								<ul>
-									<li><a href="index.html#leepa">Definicion</a></li>
-									<li><a href="herida.html">Heridas</a></li>
-									<li><a href="quemadura.html">Quemaduras</a></li>
-									<li><a href="hemorragia.html">Hemorragias</a></li>
+									<li id="definicion"><a href="index.html#leepa">Definicion</a></li>
+									<li id="quemaduras"><a href="quemadura.html">Quemaduras</a></li>
+									<li id="hemorragias"><a href="hemorragia.html">Hemorragias</a></li>
 								</ul>
 							</li>
-							<li><a href="chat.html"><h3>Conversar con Asistente</h3></a></li>
+							<li><a href="/chat" id="conversar"><h3 class="clores">CONVERSAR CON ASISTENTE</h3></a></li>
 						</ul>
 					</nav>
 
@@ -46,14 +49,16 @@
 					
 						<article id="main" class="special">
 							<header>
-								<h2><a href="#">HERIDAS</a></h2>
+								<h2 id="he1"><a href="#">HERIDAS</a></h2>
 							</header>
 									<a href="#" class="image featured"><img src="images/collageherida.jpg" alt="" /></a>
-	
-									<p>
+									<header>
+										<input type="button" id="leeheri" class="bg-primary" value="Leer">
+									</header>
+									<p id="leeher">
 										Se entiende por herida a la solución de continuidad de la piel, que son causadas por agentes externos en las estructuras anatómicas y según las características de cada lesión.
 									</p>
-									<p>
+									<p id="leehe">
 										Las heridas serias e infectadas necesitan atención médica de primeros auxilios y visitas al doctor más adelante. Debe buscar atención médica si la herida es profunda, si no puede cerrarse por sí sola, si no puede detener la hemorragia o limpiarla o si no se cura.
 									</p>
 
@@ -61,99 +66,98 @@
 								<header>
 									<h3>Clasificacion de las Heridas</h3>
 								</header>
-								<p>
+								<p id="clasher">
 								Las Heridas pueden clasificarse de la siguiente manera:
 								</p>
 							</section>
 						</article>
-						<hr />
+						<hr id="sil1">
 						<div class="row">
 							<article class="col-4 col-12-mobile special">
 								<a href="#" class="image featured"><img src="images/insicion.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Incision</a></h3>
+									<input type="button" id="lee1" class="bg-primary" value="Leer">
+									<h3 id="lee1t"><a href="#">Incisión</a></h3>
 								</header>
-								<p>
-									La herida por incision es causada mediante objetos afilados, que generan daño en piel, generalmente con una baja disrupción del aporte sanguíneo. Sanan rápidamente, en general por primera intención en caso de ser suturada. La herida tiene bordes netos.
+								<p id="lee1p">
+									La herida por incision es causada mediante objetos afilados, que generan daño en la piel, generalmente con una baja disrupción del aporte sanguíneo. Sanan rápidamente, en general por primera intención en caso de ser suturada. La herida tiene bordes netos.
 								</p>
 							</article>
 							<article class="col-4 col-12-mobile special">
 								<a href="#" class="image featured"><img src="images/ciza.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Cizallamiento o desaceleración</a></h3>
+									<input type="button" id="lee2" class="bg-primary" value="Leer">
+									<h3 id="lee2t"><a href="#">Cizallamiento o desaceleración</a></h3>
 								</header>
-								<p>
+								<p id="lee2p">
 									Causada por objetos capaces de superar la fuerza de cohesión del tejido. Es una laceración en la cual las capas de piel se separan del tejido subyacente, acompañadas de una revascularización significativa de la piel y el tejido blando. La lesión tendrá bordes dentados e irregulares, en el contexto de una piel moteada en donde el relleno capilar será difícil de ver.
 								</p>
 							</article>
 							<article class="col-4 col-12-mobile special">
 								<a href="#" class="image featured"><img src="images/contusion.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Contusión </a></h3>
+									<input type="button" id="lee3" class="bg-primary" value="Leer">
+									<h3 id="lee3t"><a href="#">Contusión </a></h3>
 								</header>
-								<p>
+								<p id="lee3p">
 									La fuerza de aplastamiento genera muerte celular inmediata y daño del suministro de sangre subyacente al tejido. Esto suele asociarse a avulsión de nervios y vasos sanguíneos, lo que se asocia a un mal pronóstico de reparación y revascularización de la herida.
 								</p>
 							</article>
 						</div>
-
-						<br>
+						<hr id="sil2">
 						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/heridaquemada.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Quemaduras</a></h3>
-								</header>
-								<p>
-									Causada por el contacto de la piel con una fuente de calor, la cual puede provenir de variadas fuentes, entre las más comunes están fuegos/llamas, escaldaduras y objetos calientes. Las quemaduras tienen su propia clasificación basada en la profundidad, la cual se evalúa mediante la apariencia, palidez a la presión, dolor y sensación del paciente.
-								</p>
-							</article>
 							<article class="col-4 col-12-mobile special">
 								<a href="#" class="image featured"><img src="images/ulceracion.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Ulceración </a></h3>
+									<input type="button" id="lee4" class="bg-primary" value="Leer">
+									<h3 id="lee4t"><a href="#">Ulceración </a></h3>
 								</header>
-								<p>
+								<p id="lee4p">
 									Causada por alteración en el revestimiento epitelial. Su patogénesis se basa en una alteración gradual de los tejidos por una etiología/patología interna. Se clasifica como una herida crónica.
 								</p>
 							</article>
 							<article class="col-4 col-12-mobile special">
 								<a href="#" class="image featured"><img src="images/escoria.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Excoriación </a></h3>
+									<input type="button" id="lee5" class="bg-primary" value="Leer">
+									<h3 id="lee5t"><a href="#">Excoriación </a></h3>
 								</header>
-								<p>
+								<p id="lee5p">
 									Es la Herida que abarca epidermis y dermis, afectando solamente el estrato de la piel. Generalmente cicatrizan de forma completa e íntegra, sin dejar cicatriz.
+								</p>
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<a href="#" class="image featured"><img src="images/superficial.jpg" alt="" /></a>
+								<header>
+									<input type="button" id="lee6" class="bg-primary" value="Leer">
+									<h3 id="lee6t"><a href="#">Superficial</a></h3>
+								</header>
+								<p id="lee6p">
+									Heridas que pueden abarcar desde la epidermis hasta la hipodermis, pudiendo incluso lesionar la fascia superficial ubicada entre el tejido adiposo y el músculo.
 								</p>
 							</article>
 						</div>
 						<br>
+						<hr id="sil3">
 						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/superficial.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Superficial</a></h3>
-								</header>
-								<p>
-									Heridas que pueden abarcar desde la epidermis hasta la hipodermis, pudiendo incluso lesionar la fascia superficial ubicada entre el tejido adiposo y el músculo.
-								</p>
-							</article>
 							<article class="col-4 col-12-mobile special">
 								<a href="#" class="image featured"><img src="images/prufunda.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Profundo </a></h3>
+									<input type="button" id="lee7" class="bg-primary" value="Leer">
+									<h3 id="lee7t"><a href="#">Profundo </a></h3>
 								</header>
-								<p>
-									Es la Herida que compromete el espesor desde la epidermis hasta el músculo, pudiendo lesionar vasos sanguíneos y/o nervios de mayor calibre. Estas tienen alcance hasta fascia profunda de revestimiento que reviste el compartimiento muscular, pero no de la fascia profunda subserosa.
+								<p id="lee7p">
+									Es la Herida que compromete el espesor desde la epidermis hasta el músculo, pudiendo lesionar vasos sanguíneos o nervios de mayor calibre. Estas tienen alcance hasta fascia profunda de revestimiento que reviste el compartimiento muscular, pero no de la fascia profunda subserosa.
 								</p>
 							</article>
 							<article class="col-4 col-12-mobile special">
 								<a href="#" class="image featured"><img src="images/penetrante.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Penetrante </a></h3>
+									<input type="button" id="lee8" class="bg-primary" value="Leer">
+									<h3 id="lee8t"><a href="#">Penetrante </a></h3>
 								</header>
-								<p>
-									Herida que abarca desde la epidermis hasta la fascia profunda subserosa que cubre las paredes internas musculo esqueléticas y forma el peritoneo. Estas comunican el medio externo con alguna cavidad corporal, definiéndose por el nombre de la cavidad comunicada. Ejemplo: Herida penetrante abdominal, torácica o craneal.
+								<p id="lee8p">
+									Herida que abarca desde la epidermis hasta la fascia profunda subserosa que cubre las paredes internas musculo-esqueléticas y forma el peritoneo. Estas comunican el medio externo con alguna cavidad corporal, definiéndose por el nombre de la cavidad comunicada. Ejemplo: Herida penetrante abdominal, torácica o craneal.
 								</p>
 							</article>
 						</div>
@@ -203,6 +207,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="js/asistenteheridas.js"></script>
 
 	</body>
 </html>

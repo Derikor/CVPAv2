@@ -176,10 +176,13 @@ input, select, textarea {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
 	}
+	.clores{
+		color: #fff;
+	}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
-		color: white;
+		color: #000;
 		line-height: 1.25em;
 	}
 
@@ -223,7 +226,8 @@ input, select, textarea {
 		-webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 		-ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 		transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-	}
+		-o-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+}
 
 		a:hover {
 			color: #3155b9;

@@ -20,8 +20,11 @@ $('#conversar').mouseover(function(){artyom.say("conversar con asistente virtual
 $('#inisesion').mouseover(function(){artyom.say("iniciar sessión",{lang:"es-ES"})})
 $('#leepa').mouseover(function(){artyom.say("Leer el contenido",{lang:"es-ES"})})
 $('#her').mouseover(function(){artyom.say("heridas",{lang:"es-ES"})})
+$('#her').mouseout(function(){artyom.shutUp()})
 $('#quem').mouseover(function(){artyom.say("quemaduras",{lang:"es-ES"})})
+$('#quem').mouseout(function(){artyom.shutUp()})
 $('#hemo').mouseover(function(){artyom.say("hemorragias",{lang:"es-ES"})})
+$('#hemo').mouseout(function(){artyom.shutUp()})
 
 artyom.addCommands([
     {
@@ -42,30 +45,68 @@ artyom.addCommands([
          }
     },
     {
-        indexes: ['volver al inicio','abrir quemaduras','abrir hemorragias','abrir heridas','hablar con el asistente','conversar con asistente'],
+        indexes: ['volver al inicio','ir al inicio','abrir quemaduras','ir a quemaduras','abrir hemorragias','ir a hemorragias','abrir heridas','ir a heridas','hablar con el asistente','conversar con asistente'],
         action: function(i){
-            if (i==0){
+            if (i==0 || i==1){
                 artyom.say("volviendo a la ventana principal",{lang:"es-ES"}); 
                 window.open("index.html",'_top');
             }
-            if (i==1){
+            if (i==2 || i==3){
                 artyom.say("abriendo ventana de quemaduras",{lang:"es-ES"});   
                 window.open("quemadura.html",'_top');
             }
-            if (i==2){
+            if (i==4 || i== 5){
                 artyom.say("abriendo ventana de hemorragias",{lang:"es-ES"});   
                 window.open("hemorragia.html",'_top');
             }
-            if (i==3){
+            if (i==6 || i==7){
                 artyom.say("abriendo ventana de heridas",{lang:"es-ES"});   
                 window.open("herida.html",'_top');
             }
-            if (i==4 || i==5){
+            if (i==8 || i==9){
                 artyom.say("abriendo ventana de asistente",{lang:"es-ES"});   
                 window.open("/chat",'_top');
             }
          }
     },
+    {
+        indexes: ['leer','leer primeros auxilios','leer el contenido'],
+        action: function(i){
+            if (i==0 || i==1 || i==2){
+                    var pa = $('#pa').text();
+                    var p = $('#defpa').text();
+                    if (artyom.speechSupported()) {
+                        artyom.say(pa,{
+                            onStart:function(){
+                                console.log("Comenzando a leer texto");
+                            },
+                            onEnd:function(){
+                                console.log("Texto leido satisfactoriamente");
+                            }
+                        })
+                        artyom.say(p,{
+                            onStart:function(){
+                                console.log("Comenzando a leer texto");
+                            },
+                            onEnd:function(){
+                                console.log("Texto leido satisfactoriamente");
+                            }
+                        });
+                    } else {
+                        alert("Tu Navegador no puede hablar");
+                    }
+            }
+         }
+    },
+    {
+        indexes: ['heridas','herida','quemaduras','quemadura','hemorragias','hemorragia'],
+        action: function(i){
+            if (i==0 || i==1 || i==2 || i==3 || i==4 || i==5){
+                artyom.say("para realizar consultas por voz debe ingresar a la ventana conversar con asistente");   
+            }
+         }
+    },
+    
  ]);
 
  artyom.redirectRecognizedTextOutput(function(text,isfinal){
@@ -84,6 +125,7 @@ setTimeout(function(){// Esperar 250ms para inicializar
  artyom.initialize({
     lang: "es-ES",
     continuous:true,// Artyom obedecera por siempre
+    executionKeyword: "y",
     listen:true, // Iniciar !
     debug:true, // Muestra un informe en la consola
     speed:1 // Habla normalmente
@@ -98,15 +140,16 @@ setTimeout(function(){// Esperar 250ms para inicializar
     var pa = $('#pa').text();
     var p = $('#defpa').text();
     if (artyom.speechSupported()) {
-        artyom.say(pa,{
+        artyom.say(pa,{lang:"es-ES"},{
             onStart:function(){
                 console.log("Comenzando a leer texto");
             },
             onEnd:function(){
                 console.log("Texto leido satisfactoriamente");
             }
+            
         })
-        artyom.say(p,{
+        artyom.say(p,{lang:"es-ES"},{
             onStart:function(){
                 console.log("Comenzando a leer texto");
             },
