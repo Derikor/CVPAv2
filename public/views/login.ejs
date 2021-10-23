@@ -18,7 +18,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">Consultorio Virtual de Primeros Auxilios</a></h1>
+								<h1><a href="index.html" id="logo">Iniciar sesión para el registro del personal</a></h1>
 							</header>
 						</div>
 
@@ -26,37 +26,36 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html"><h3 class="clores">INICIO</h3></a></li>
-							<li>
-								<a href="#"><h3 class="clores">PRIMEROS AUXILIOS</h3></a>
-								<ul>
-									<li><a href="#">Definicion</a></li>
-									<li><a href="herida.html">Heridas</a></li>
-									<li><a href="quemadura.html">Quemaduras</a></li>
-									<li><a href="hemorragia.html">Hemorragias</a></li>
-								</ul>
-							</li>
-							<li><a href="/chat"><h3 class="clores">CONVERSAR CON ASISTENTE</h3></a></li>
+							<li><a href="/reportmen"><h3 class="clores">REPORTE MENSAJES DE USUARIO</h3></a></li>
+							<li><a href="/reportper"><h3 class="clores">ADMINISTRACIÓN DEL PERSONAL</h3></a></li>
 						</ul>
 					</nav>
 
 				</div>
 
             <!-- logueado -->
-			<div class="container-md w-50 mt-5 mb-5 rounded-3 shadow fondoima2">
+			<div class="container-md w-50 mt-5 mb-5 rounded-3 shadow fondoima">
+				<br>
+				<%if (signinMessage.length > 0) {%>
+					<div class="alert alert-danger" align="center"><%= signinMessage %></div>
+				  <% } %>
+
 				<div class="row">
-					<h2 align="center" class="clores">BIENVENIDO</h2>
-					<form action="" method="POST">
+					<h2 align="center">INICIAR SESIÓN</h2>
+					<form action="/aut" method="POST">
 						<div class="section">
-							<div class="title"><h3 class="clores">Usuario</h3></div>
-							<div class="field"><input type="text" id="username" name="username" required class="shadow"></div>
+							<div ><h3>ADMINISTRADOR</h3></div>
+							<div><input type="text" name="username" required class="shadow bg-secondary text-white"></div>
 						</div>
 						<div class="section">
-							<div class="title"><h3 class="clores">Contraseña</h3></div>
-							<div class="field"><input type="password" id="password" name="password" required onclick="validar()" class="shadow"></div>
+							<div ><h3>CONTRASEÑA</h3></div>
+							<div ><input type="password" name="password" required class="shadow bg-secondary text-white"></div>
 						</div>
 						<br>
 						<div class="section">
-							<div align="center"><input type="button" class="bg-primary mb-3" value="Ingresar""></div>
+							<div align="center"><input type="submit" class="bg-primary mb-3" value="Ingresar""><br><span id="f"></span></div>
+                            <div align="center"><a href="/register"><h3 class="text-primary">Registrarse</h3> </a></div>
+							<br>
 						</div>
 					</form>
 				</div>
@@ -106,6 +105,5 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-		<script type="text/javascript" src="js/logueo.js"></script>
 	</body>
 </html>

@@ -1,8 +1,8 @@
 const express = require('express');
-const mjscomands = require('./public/comands/Msj')
-const reg = require('./public/models/horario_especialidad')
-const m = require('./public/models/User_Message')
+const reg = require('./public/models/horario_especialidad');
+const m = require('./public/models/User_Message');
 const router = express.Router();
+const passport = require('passport');
 
 // rutas 
 router.get('/reportper', async (req, res)=>{
@@ -11,6 +11,9 @@ router.get('/reportper', async (req, res)=>{
         regis:regis
     });
 });
+router.get('/registrop',isAuthenticated,(req, res) => {
+    res.render('registropersonal');
+  });
 router.post('/add', async (req, res)=>{
     const regis = new reg(req.body);
     await regis.save();
@@ -62,16 +65,45 @@ router.get('/busca:id', async (req, res)=>{
         busc
     });
 });
+router.get('/log', (req, res)=>{
+    res.render('login');
+});
+router.get('/register', (req, res)=>{
+    res.render('regisadm');
+});
 
+// autenticacion
+router.post('/registrarse', passport.authenticate('local-signup', {
+    successRedirect: '/log',
+    failureRedirect: '/register',
+    failureFlash: true
+  }));
+router.post('/aut', passport.authenticate('local-signin', {
+    successRedirect: '/registrop',
+    failureRedirect: '/log',
+    failureFlash: true
+  }));
+router.get('/logout', (req, res, next) => {
+    req.logout();
+    res.redirect('/log');
+  });
+  
+  
+  function isAuthenticated(req, res, next) {
+    if(req.isAuthenticated()) {
+      return next();
+    }
+  
+    res.redirect('/log')
+  }
 
-router.get('/product', mjscomands.getmsj)
-
-router.get('/product/:productid', mjscomands.getmsjid)
-
-router.post('/product', mjscomands.savemsj)
-
-router.put('/product/:productid', mjscomands.updatemsj)
-
-router.delete('/product/:productid', mjscomands.deletemsj)
-
+router.get('/logeoper', (req, res)=>{
+    res.render('iniciopersonal');
+});
+router.post('/inises', passport.authenticate('inicio', {
+    successRedirect: '/reportmen',
+    failureRedirect: '/logeoper',
+    failureFlash: true
+  }));
+  
 module.exports = router

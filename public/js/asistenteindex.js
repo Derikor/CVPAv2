@@ -1,5 +1,5 @@
 const artyom = new Artyom();
-
+artyom.say("Bienvenido al Consultorio Virtual de Primeros Auxilios, en qué puedo ayudarle",{lang:"es-ES"});
 // CONFIGURACION CABECERA
 $('#empe').click(function(){artyom.say("Bienvenido al Consultorio Virtual de Primeros Auxilios, en qué puedo ayudarle",{
     lang:"es-ES",
@@ -34,13 +34,13 @@ artyom.addCommands([
                 artyom.say("Bienvenido dime que quiere hacer");   
             }
             if (i==1 || i==2){
-                artyom.say("Hola, buenos dias");   
+                artyom.say("hola, buenos dias, como le puedo ayudar");   
             }
             if (i==3){
-                artyom.say("Hola, buenas tardes");   
+                artyom.say("hola, buenas tardes, como le puedo ayudar");   
             }
             if (i==4){
-                artyom.say("Hola, buenas noches");   
+                artyom.say("hola, buenas noches, como le puedo ayudar");   
             }
          }
     },
@@ -102,7 +102,7 @@ artyom.addCommands([
         indexes: ['heridas','herida','quemaduras','quemadura','hemorragias','hemorragia'],
         action: function(i){
             if (i==0 || i==1 || i==2 || i==3 || i==4 || i==5){
-                artyom.say("para realizar consultas por voz debe ingresar a la ventana conversar con asistente");   
+                artyom.say("para realizar consultas de asistencia por voz debe ingresar a la ventana conversar con asistente");   
             }
          }
     },
@@ -122,11 +122,10 @@ artyom.addCommands([
          span.val(text);
      }
  });
+ function detente(){
+    artyom.shutUp()
+}
 
-
-
-function start(){
-artyom.fatality();// Detener cualquier instancia previa
 
 setTimeout(function(){// Esperar 250ms para inicializar
  artyom.initialize({
@@ -140,7 +139,6 @@ setTimeout(function(){// Esperar 250ms para inicializar
     console.log('comenzando a escuchar');
 });
 },250);
-}
 
  $('#leepa').click(function (e) {
     e.preventDefault();

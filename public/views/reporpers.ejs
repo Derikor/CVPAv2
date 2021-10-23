@@ -12,6 +12,8 @@
   <noscript>
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
+  <script src="../assets/js/html2pdf.bundle.min.js"></script>
+  <script src="../js/imppdf.js"></script>
 </head>
 
 <body>
@@ -28,13 +30,24 @@
     <nav id="nav">
       <ul>
         <li><a href="index.html"><h3 class="clores">INICIO</h3></a></li>
-        <li><a href="personal.html"><h3 class="clores">REGISTRO DEL PERSONAL</h3></a></li>
+        <li><a href="/registrop"><h3 class="clores">REGISTRO DEL PERSONAL</h3></a></li>
         <li><a href="/reportmen"><h3 class="clores">REPORTE MENSAJES DE USUARIO</h3></a></li>
       </ul>
     </nav>
-
   </div>
+  <br>
   <div class="container px-5 col-md-10 table-responsive">
+      <div class="buscar">
+        <form action="/busca" method="post">
+            <input class="btex" type="search" placeholder="Buscar por Nombre" name="date" id="date">
+            &nbsp;
+            <a href=""><i class="fas fa-search bticon"></i></a>
+        </form>
+      </div>
+      <div class="d-flex justify-content-end">
+        <button id="imp1" class="rounded-pill">GENERAR PDF &nbsp;<i class="far fa-file-pdf"></i></button>
+      </div>
+    <br>
     <table class="table table-bordered table-striped">
       <thead>
         <tr>

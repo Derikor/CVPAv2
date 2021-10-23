@@ -20,6 +20,11 @@ $('#her').mouseover(function(){artyom.say("heridas",{lang:"es-ES"})})
 $('#quem').mouseover(function(){artyom.say("quemaduras",{lang:"es-ES"})})
 $('#hemo').mouseover(function(){artyom.say("hemorragias",{lang:"es-ES"})})
 
+
+function detente(){
+    artyom.shutUp()
+}
+
 artyom.addCommands([
     {
         indexes: ['Hola','buen día','buenos días','buenas tardes','buenas noches','gracias'],

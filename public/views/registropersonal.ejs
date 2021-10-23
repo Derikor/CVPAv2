@@ -23,40 +23,42 @@
         <li><a href="index.html"><h3 class="clores">INICIO</h3></a></li>
         <li><a href="/reportmen"><H3 class="clores">REPORTE MENSAJES DE USUSARIOS</H3></a></li>
         <li><a href="/reportper"><H3 class="clores">ADMINISTRACIÓN DEL PERSONAL</H3></a></li>
+
+        <li><a href="/logout"><H3 class="clores">CERRAR SESSIÓN</H3></a></li>
       </ul>
     </nav>
 
   </div>
-  <div class="container w-50 mt-5 mb-5rounded-3 shadow fondoima1">
+  <div class="container w-50 mt-5 mb-5rounded-3 shadow fondoima3">
     <div class="row">
-      <h2 align="center"> PERSONAL</h2>
+      <h2 align="center" class="clores"> PERSONAL</h2>
       <form action="/add" id="personal" method="post">
         <div class="row col-12">
           <div class="section col">
-            <label for="name" class="form-label">COD PERSONAL:</label>
-            <input type="text" name="codp" size="8" placeholder="" required class="border border-dark"/>
+            <label for="name" class="text-white fw-bold">COD PERSONAL:</label>
+            <input type="text" name="codp" size="8" placeholder="" required class="border border-dark bg-info"/>
           </div>
           <div class="section col">
-            <label for="date">HORARIO DE TRABAJO</label>
-            <input type="time" name="horadeatencion" required class="border border-dark"/>
+            <label for="date" class="text-white fw-bold">HORARIO DE TRABAJO</label>
+            <input type="time" name="horadeatencion" required class="border border-dark bg-info"/>
           </div>
           <div class="section col">
-            <label for="name">CARGO:</label>
-            <input class="border border-dark" type="text" name="especialidad" placeholder="" required />
+            <label for="name" class="text-white fw-bold">CARGO:</label>
+            <input class="border border-dark bg-info" type="text" name="especialidad" placeholder="" required />
           </div>
         </div>
 
         <div class="section">
-          <label for="name">NOMBRE/S:</label>
-          <input type="text" name="nombre" size="28" placeholder="" required class=" w-50 border border-dark"/>
+          <label for="name" class="text-white fw-bold">NOMBRE/S:</label>
+          <input type="text" name="nombre" size="28" placeholder="" required class=" w-50 border border-dark bg-info"/>
         </div>
         <div class="section">
-          <label for="name">APELLIDO PATERNO:</label>
-          <input type="text" name="appaterno" placeholder="" required class="w-50 border border-dark"/>
+          <label for="name" class="text-white fw-bold">APELLIDO PATERNO:</label>
+          <input type="text" name="appaterno" placeholder="" required class="w-50 border border-dark bg-info"/>
         </div>
         <div class="section">
-          <label for="name">APELLIDO MATERNO:</label>
-          <input type="text" name="apmaterno" placeholder=""  class="w-50 border border-dark"/>
+          <label for="name" class="text-white fw-bold">APELLIDO MATERNO:</label>
+          <input type="text" name="apmaterno" placeholder=""  class="w-50 border border-dark bg-info"/>
         </div>
         <br>
         <div class="section">

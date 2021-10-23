@@ -1,39 +1,19 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-
-const jump = 10;
+const bcrypt = require('bcrypt-nodejs');
 
 const Logueo = new mongoose.Schema({
-    username:{type: String, required: true, unique: true, lowercase:true},
-    password:{type: String, required: true, select: false},
+    username:String,
+    password:String,
     logindate:{ type: Date , default: Date.now()},
     lastlogin: Date
 });
 
-Logueo.pre('save', function(next){
-    if(this.isNew || this.isMofified('password')){
-        const document = this;
-        bcrypt.hash(document.password,jump, (err, hashedPassword) =>{
-            if(err){
-                next(err);
-            }else{
-                document.password = hashedPassword;
-                next();
-            }
-        });
-    }else{
-        next();
-    }
-}); 
-
-Logueo.methods.isCorrectPassword = function(password, callback){
-    bcrypt.compare(password, this.password, function(err, same){
-        if(err){
-            callback(err);
-        }else{
-            callback(err, same);
-        }
-    });
-}
+Logueo.methods.encryptPassword = (password) => {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+  };
+  
+Logueo.methods.comparePassword= function (password) {
+    return bcrypt.compareSync(password, this.password);
+  };
 
 module.exports = mongoose.model('login',Logueo);

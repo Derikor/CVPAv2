@@ -1,5 +1,5 @@
 const artyom = new Artyom();
-
+artyom.say("Bienvenido a la ventana de quemaduras",{lang:"es-ES"});
 // CONFIGURACION CABECERA
 $('#inicio').mouseover(function(){artyom.say("iniciando")})
 $('#primaux').mouseover(function(){artyom.say("Primeros Auxilios")})
@@ -13,7 +13,10 @@ $('#conversar').mouseover(function(){artyom.say("conversar con asistente virtual
 $('#leequema').mouseover(function(){artyom.say("Leer el contenido de quemadura")})
 $('#q1').mouseover(function(){artyom.say("quemaduras",{lang:"es-ES"})})
 $('#q1').mouseout(function(){artyom.shutUp()})
-$('#sil1').mouseout(function(){artyom.shutUp()})
+
+function detente(){
+    artyom.shutUp()
+}
 
 $('#leequema').click(function (e) {
     e.preventDefault();

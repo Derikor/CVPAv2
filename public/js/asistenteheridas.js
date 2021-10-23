@@ -1,5 +1,5 @@
 const artyom = new Artyom();
-
+artyom.say("Bienvenido a la ventana de heridas",{lang:"es-ES"});
 // CONFIGURACION CABECERA
 $('#inicio').mouseover(function(){artyom.say("iniciando",{lang:"es-ES"})})
 $('#primaux').mouseover(function(){artyom.say("Primeros Auxilios",{lang:"es-ES"})})
@@ -13,10 +13,11 @@ $('#conversar').mouseover(function(){artyom.say("conversar con asistente virtual
 $('#leeheri').mouseover(function(){artyom.say("Leer el contenido de herida",{lang:"es-ES"})})
 $('#he1').mouseover(function(){artyom.say("heridas",{lang:"es-ES"})})
 $('#he1').mouseout(function(){artyom.shutUp()})
-$('#sil1').mouseout(function(){artyom.shutUp()})
-$('#sil2').mouseout(function(){artyom.shutUp()})
-$('#sil3').mouseout(function(){artyom.shutUp()})
 
+
+function detente(){
+    artyom.shutUp()
+}
 
 $('#leeheri').click(function (e) {
     e.preventDefault();
@@ -281,6 +282,10 @@ setTimeout(function(){// Esperar 250ms para inicializar
    }, 10000);
 
 
+
+
+//comandos-------------------------------------------------------------------------------------------------------------------------------------
+
    artyom.addCommands([
     {
         indexes: ['Hola','buen día','buenos días','buenas tardes','buenas noches'],
@@ -329,6 +334,44 @@ setTimeout(function(){// Esperar 250ms para inicializar
             if (i==4 || i==5){
                 artyom.say("abriendo ventana de asistente",{lang:"es-ES"});   
                 window.open("/chat",'_top');
+            }
+         }
+    },
+    {
+        indexes: ['leer','leer heridas','leer el contenido'],
+        action: function(i){
+            if (i==0 || i==1 || i==2){
+                    var a = $('#leeher').text();
+                    var b = $('#leehe').text();
+                    var c = $('#clasher').text();
+                    if (artyom.speechSupported()) {
+                        artyom.say(a,{
+                            onStart:function(){
+                                console.log("Comenzando a leer texto");
+                            },
+                            onEnd:function(){
+                                console.log("Texto leido satisfactoriamente");
+                            }
+                        })
+                        artyom.say(b,{
+                            onStart:function(){
+                                console.log("Comenzando a leer texto");
+                            },
+                            onEnd:function(){
+                                console.log("Texto leido satisfactoriamente");
+                            }
+                        });
+                        artyom.say(c+"por insisión,por cizallamiento o desaceleración,por contusión,por ulceración,por excoriación,superficial, profundo y penetrante",{
+                            onStart:function(){
+                                console.log("Comenzando a leer texto");
+                            },
+                            onEnd:function(){
+                                console.log("Texto leido satisfactoriamente");
+                            }
+                        });
+                    } else {
+                        alert("Tu Navegador no puede hablar");
+                    }
             }
          }
     },
