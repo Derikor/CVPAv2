@@ -30,7 +30,7 @@ function detente(){
 
 artyom.addCommands([
     {
-        indexes: ['Hola','buen día','buenos días','buenas tardes','buenas noches','gracias'],
+        indexes: ['Hola','buen día','buenos días','buenas tardes','buenas noches','gracias','consulta'],
         action: function(i){
             if (i==0){
                 artyom.say("Hola, Bienvenido sea usted",{lang:"es-ES"});   
@@ -46,6 +46,9 @@ artyom.addCommands([
             }
             if (i==5){
                 artyom.say("de nada",{lang:"es-ES"});   
+            }
+            if (i==6){
+                artyom.say("digame en que puedo ayudarle",{lang:"es-ES"});   
             }
          }
     },
