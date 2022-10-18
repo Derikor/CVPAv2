@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<%- include('part/head') %> 
+
+<body >
+    <!--Start Preloader-->
+    <div class="site-preloader">
+        <div class="spinner"><img src="img/loader.gif" alt=""></div>
+    </div>
+    <!--End Preloader-->
+    <!-- Main Menu Area Start -->
+    <header id="mainHeader" class="header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="container"><a class="navbar-brand" href="index.html"><img src="img/logcvpa.png" alt=""></a><button
+                    class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" >Mensajes de Usuarios</a>
+                            <div class="dropdown-menu" aria-labelledby="service">
+                                <a class="dropdown-item" href="/reportmen">Verificar Mensajes</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Mejorar Asistente</a>
+                            <div class="dropdown-menu" aria-labelledby="service">
+                                <a class="dropdown-item" href="">Respuesta a Heridas</a>
+                                <a class="dropdown-item" href="">Respuesta a Hemorragias</a>
+                                <a class="dropdown-item" href="">Respuesta a Quemaduras</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#">Horarios del Personal</a>
+                            <div class="dropdown-menu" aria-labelledby="service">
+                                <a class="dropdown-item" href="/reportper">Verificar Horarios</a>
+                                <a class="dropdown-item" href="">Registrar Horario</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="call_btn">
+                        <a href="/logout">CERRAR SESIÓN</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!------------------------- Main Menu Area End -------------------->
+
+
+
+
+
+
+
+
+    <%- include('part/footer') %> 
+
+    <!--Start ClickToTop-->
+    <div class="totop"><a href="#top">
+            <p><i class="fas fa-angle-up"></i></p>
+        </a></div>
+    <!--End ClickToTop-->
+    <!--jQuery JS-->
+    <script src="js/jquery.min.js"></script>
+    <!--Bootstrap JS-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.js"></script><!-- Way Point js -->
+    <script src="js/waypoints.min.js"></script><!-- Owl carosul js -->
+    <script src="js/owl.carousel.min.js"></script><!-- Venobox JS-->
+    <script src="js/venobox.min.js"></script><!-- date and time picker -->
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
+    <script src="js/dateandtimeactive.js"></script>
+    <!--Main-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

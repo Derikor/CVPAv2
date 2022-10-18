@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<%- include('part/head') %> 
+
+<body >
+    <!--Start Preloader-->
+    <div class="site-preloader">
+        <div class="spinner"><img src="img/loader.gif" alt=""></div>
+    </div>
+    <!--End Preloader-->
+    <!-- Main Menu Area Start -->
+    <header id="mainHeader" class="header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="container"><a class="navbar-brand" href="index.html"><img src="img/logcvpa.png" alt=""></a><button
+                    class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" >Mensajes de Usuarios</a>
+                            <div class="dropdown-menu" aria-labelledby="service">
+                                <a class="dropdown-item" href="/reportmen">Verificar Mensajes</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Mejorar Asistente</a>
+                            <div class="dropdown-menu" aria-labelledby="service">
+                                <a class="dropdown-item" href="">Respuesta a Heridas</a>
+                                <a class="dropdown-item" href="">Respuesta a Hemorragias</a>
+                                <a class="dropdown-item" href="">Respuesta a Quemaduras</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#">Horarios del Personal</a>
+                            <div class="dropdown-menu" aria-labelledby="service">
+                                <a class="dropdown-item active" href="/reportper">Verificar Horarios</a>
+                                <a class="dropdown-item" href="">Registrar Horario</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="call_btn">
+                        <a href="/logout">CERRAR SESIÓN</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!------------------------- Main Menu Area End -------------------->
+
+  <br>
+  <div class="container px-5 col-md-10 table-responsive">
+      <div class="d-flex justify-content-end">
+        <button id="imp1" class="btn btn-danger">GENERAR PDF &nbsp;<i class="far fa-file-pdf"></i></button>
+      </div>
+      <br>
+      <form action="/busca" method="get">
+        <div class="input-group">
+          <div id="search-autocomplete" class="form-outline">
+            <input type="search" placeholder="Buscar por Nombre" name="nombre" class="form-control" />
+          </div>
+          <button class="btn btn-primary">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+    <br>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th class="table-primary">N°</th>
+          <th class="table-primary">Cod</th>
+          <th class="table-primary">Personal</th>
+          <th class="table-primary">Horario</th>
+          <th class="table-primary">Especialidad</th>
+          <th class="table-primary">Operacion</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% for( var i = 0; i < busc.length ; i++ ) { %>
+             <tr>
+                 <td><%= i+1 %> </td>
+                 <td><%= busc[i].codp %> </td>
+                 <td><%= busc[i].nombre%>&nbsp;&nbsp;&nbsp;&nbsp;<%= busc[i].appaterno%>&nbsp;&nbsp;&nbsp;&nbsp;<%= busc[i].apmaterno%> </td>
+                 <td><%= busc[i].horadeatencion %> </td>
+                 <td><%= busc[i].especialidad %> </td>
+                 <td>
+                     <a href="/modificar/<%= busc[i]._id %>" class="btn btn-primary">Modificar</a>
+                     <a href="/eliminar/<%= busc[i]._id %>" class="btn btn-danger">Eliminar</a>
+                 </td>
+             </tr>
+          <% } %>
+      </tbody>
+    </table>
+  </div>
+
+ <!-- Footer -->
+  <%- include('part/footer') %> 
+
+    <!--Start ClickToTop-->
+    <div class="totop"><a href="#top">
+      <p><i class="fas fa-angle-up"></i></p>
+  </a></div>
+<!--End ClickToTop-->
+<!--jQuery JS-->
+<script src="js/jquery.min.js"></script>
+<!--Bootstrap JS-->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.js"></script><!-- Way Point js -->
+<script src="js/waypoints.min.js"></script><!-- Owl carosul js -->
+<script src="js/owl.carousel.min.js"></script><!-- Venobox JS-->
+<script src="js/venobox.min.js"></script><!-- date and time picker -->
+<script src="js/jquery.datetimepicker.full.min.js"></script>
+<script src="js/dateandtimeactive.js"></script>
+<!--Main-->
+<script src="js/main.js"></script>
+<!--impresion-->
+<script src="../js/html2pdf.bundle.min.js"></script>
+<script src="../js/imppdf.js"></script>
+</body>
+
+</html>

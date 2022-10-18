@@ -14,17 +14,20 @@ passport.deserializeUser(async (id, done) => {
 });
 
 passport.use('local-signup', new LocalStrategy({
-  usernameField: 'username',
+  usernameField: 'email',
   passwordField: 'password',
   passReqToCallback: true
-}, async (req, username, password, done) => {
-  const user = await User.findOne({'username': username})
+}, async (req,email, password, done) => {
+  const user = await User.findOne({email: email})
   console.log(user)
   if(user) {
-    return done(null, false, req.flash('signupMessage', 'EL NOMBRE DE ADMINISTRADOR YA EXISTE'));
-  } else {
+    return done(null, false, req.flash('signupMessage', 'EL EMAIL DEL ADMINISTRADOR YA EXISTE'));
+  }
+  else {
     const newUser = new User();
-    newUser.username = username;
+    newUser.username = req.param('username');
+    newUser.email = email;
+    newUser.cell = req.param('cell');
     newUser.password = newUser.encryptPassword(password);
   console.log(newUser)
     await newUser.save();
@@ -33,31 +36,17 @@ passport.use('local-signup', new LocalStrategy({
 }));
 
 passport.use('local-signin', new LocalStrategy({
-  usernameField: 'username',
+  usernameField: 'email',
   passwordField: 'password',
   passReqToCallback: true
-}, async (req, username, password, done) => {
-  const user = await User.findOne({username: username});
+}, async (req, email, password, done) => {
+  const user = await User.findOne({email: email});
   if(!user) {
-    return done(null, false, req.flash('signinMessage', 'ADMINISTRADOR NO REGISTRADO'));
+    return done(null, false, req.flash('signinMessage', 'EMAIL DE ADMINISTRADOR NO REGISTRADO'));
   }
   if(!user.comparePassword(password)) {
     return done(null, false, req.flash('signinMessage', 'CONTRASEÑA INCORRECTA'));
   } 
-  return done(null, user);
-}));
-
-passport.use('inicio', new LocalStrategy({
-  usernameField: 'nombre',
-  passwordField: 'codp',
-  passReqToCallback: true
-}, async (req, nombre, codp, done) => {
-  const user = await lg.findOne({nombre: nombre});
-  if(!user) {
-    return done(null, false, req.flash('signinMessage', 'ADMINISTRADOR NO REGISTRADO'));
-  }
-  if(!user.comparePassword(codp)) {
-    return done(null, false, req.flash('signinMessage', 'CONTRASEÑA INCORRECTA'));
-  } 
-  return done(null, user);
+  done(null, user);
+  done(null, us);
 }));

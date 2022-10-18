@@ -3,6 +3,8 @@ const bcrypt = require('bcrypt-nodejs');
 
 const Logueo = new mongoose.Schema({
     username:String,
+    email:String,
+    cell:{type: String},
     password:String,
     logindate:{ type: Date , default: Date.now()},
     lastlogin: Date

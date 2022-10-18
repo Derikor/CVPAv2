@@ -1,18 +1,26 @@
 const express = require('express');
 const reg = require('./public/models/horario_especialidad');
 const m = require('./public/models/User_Message');
+const resp = require('./public/models/asistentechat');
 const router = express.Router();
 const passport = require('passport');
-
 // rutas 
+//horario personal
 router.get('/reportper', async (req, res)=>{
     const regis = await reg.find();
     res.render('reporpers',{
         regis:regis
     });
 });
-router.get('/registrop',isAuthenticated,(req, res) => {
-    res.render('registropersonal');
+router.get('/busca', async (req, res)=>{
+    const busc = await reg.findOne(req.body.nombre);
+    res.render('buscanom',{
+        busc
+    });
+});
+//login
+router.get('/ingres',isAuthenticated,(req, res) => {
+    res.render('ingreso');
   });
 router.post('/add', async (req, res)=>{
     const regis = new reg(req.body);
@@ -39,7 +47,7 @@ router.get('/eliminar/:id', async (req, res)=>{
 router.get('/chat', (req, res)=>{
     res.render('asistente');
 });
-
+//agregar mensajes
 router.post('/addmen', async (req, res)=>{
     const savm = new m();
         savm.title ="Mensaje de Usuario",
@@ -47,10 +55,25 @@ router.post('/addmen', async (req, res)=>{
     await savm.save();
     res.redirect('/chat');
 });
+//agregar respuestas
+router.post('/addres', async (req, res)=>{
+    const savr = new resp();
+        savr.entrada =req.body.entrada,
+        savr.salida = req.body.salida
+    await savm.save();
+    res.redirect('/chat');
+});
+// reportes de mensajes de usuarios 
 router.get('/reportmen', async (req, res)=>{
     const men = await m.find();
     res.render('msjusuarios',{
         men:men
+    });
+});
+router.get('/buscafecha', async (req, res)=>{
+    const dat = await m.findOne(req.body.date);
+    res.render('msjusufecha',{
+        dat
     });
 });
 router.get('/elimi/:id', async (req, res)=>{
@@ -58,13 +81,7 @@ router.get('/elimi/:id', async (req, res)=>{
     await m.remove({_id: id});
     res.redirect('/reportmen');
 });
-router.get('/busca:id', async (req, res)=>{
-    const { date } = req.params;
-    const busc = await m.findById(date);
-    res.render('buscafecha',{
-        busc
-    });
-});
+//login
 router.get('/log', (req, res)=>{
     res.render('login');
 });
@@ -79,7 +96,7 @@ router.post('/registrarse', passport.authenticate('local-signup', {
     failureFlash: true
   }));
 router.post('/aut', passport.authenticate('local-signin', {
-    successRedirect: '/registrop',
+    successRedirect: '/ingres',
     failureRedirect: '/log',
     failureFlash: true
   }));
@@ -105,5 +122,5 @@ router.post('/inises', passport.authenticate('inicio', {
     failureRedirect: '/logeoper',
     failureFlash: true
   }));
-  
+
 module.exports = router
