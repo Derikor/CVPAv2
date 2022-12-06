@@ -1,3 +1,8 @@
+@media (max-width: 1800.98px) {
+  .tarea{
+    margin-bottom: 50px;
+  }
+}
 @media (max-width: 1199.98px) {
   .header .call_btn a {
     width: 140px;
@@ -111,6 +116,15 @@
   }
   .contact-wrap {
     padding: 112px 0px 90px;
+  }
+  .tarea{
+    width: 370px;
+    height: 400px;
+    padding-left: 300px;
+  }
+  .img-fluid{
+    height: 500px;
+    margin-bottom: 100px;
   }
 }
 @media (max-width: 991.98px) {
@@ -276,7 +290,14 @@
     position: absolute;
   }
   .img-fluid{
-    height: 350px;
+    height: 500px;
+  }
+  .tarea{
+    width: 400px;
+    height: 450px;
+  }
+  .area{
+    width: 400px;
   }
 }
 @media (max-width: 767.98px) {
@@ -579,16 +600,12 @@
   .giveAndtakeNumber .companyNumber {
     width: 250px;
   }
-  .invi{
-    opacity: 0;
-    position: absolute;
-  }
   .area{
-    width: 300px;
+    width: 280px;
   }
   .tarea{
-    margin-right: 20px;
-    height: 300px;
+    height: 350px;
+    padding-left: 280px;
   }
   .img-fluid{
     height: 350px;
@@ -816,11 +833,21 @@
     color: #333;
   }
   .tarea{
-    margin-right: 20px;
-    height: 350px;
+    height: 400px;
+    margin-bottom: 50px;
+    padding-left: 260px;
+  }
+  .area{
+    width: 260px;
   }
   .img-fluid{
-    height: 250px;
+    height: 400px;
+  }
+  .txt1{
+    width: 380px;
+  }
+  .txt2{
+    width: 380px;
   }
 }
 @media (max-width: 384px) {
@@ -931,6 +958,7 @@
   .contact-form .mr_btn_fill {
     font-size: 14px;
   }
+  
 }
 @media (max-width: 360px) {
   #slider-area .slide-caption h1 {
@@ -1021,6 +1049,12 @@
   .faq-accordian .panel-group .panel .panel-heading .panel-title a {
     padding: 20px 20px;
     padding-left: 40px;
+  }
+  .img-fluid{
+    opacity: 0;
+  }
+  .area{
+    width: 200px;
   }
 }
 @media (max-width: 330px) {

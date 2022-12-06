@@ -127,8 +127,73 @@ p {
   no-repeat fixed center center rgb(227, 18, 18);
   background-size: cover;
 }
+.fondoheri{
+  background: url("../img/CENTRO_DE_SALUD/c1.jpeg") 
+  no-repeat fixed center center rgb(227, 18, 18);
+  background-size: cover;
+}
+.fondohemo{
+  background: url("../img/CENTRO_DE_SALUD/c2.jpeg") 
+  no-repeat fixed center center rgb(227, 18, 18);
+  background-size: cover;
+}
+.fondoquema{
+  background: url("../img/CENTRO_DE_SALUD/c3.jpeg") 
+  no-repeat fixed center center rgb(227, 18, 18);
+  background-size: cover;
+}
+.fondo4{
+  background: url("../img/CENTRO_DE_SALUD/c4.jpeg") 
+  no-repeat fixed center center rgb(227, 18, 18);
+  background-size: cover;
+}
+.fondo5{
+  background: url("../img/CENTRO_DE_SALUD/c5.jpeg") 
+  no-repeat fixed center center rgb(227, 18, 18);
+  background-size: cover;
+}
+.fondo6{
+  background: url("../img/CENTRO_DE_SALUD/c6.jpeg") 
+  no-repeat fixed center center rgb(227, 18, 18);
+  background-size: cover;
+}
+
+.txt1{
+  width: 50%;
+}
+.txt2{
+  width: 50%;
+  height: 25%;
+}
+.txtcolor{
+  color: rgb(208, 14, 14);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  font-size: 42px;
+}
+.txtcolor1{
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0.5px rgb(246, 255, 0);
+  font-size: 30px;
+}
+.txtcolor2{
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  font-size: 50px;
+}
+.but1{
+  background: rgb(4, 0, 255);
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
 .tarea{
-  height: 380px;
+  height: 350px;
   width: 450px;
 }
 .btncir {

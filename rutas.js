@@ -2,36 +2,38 @@ const express = require('express');
 const reg = require('./public/models/horario_especialidad');
 const m = require('./public/models/User_Message');
 const resp = require('./public/models/asistentechat');
+const respheri = require('./public/models/asistenteheridas');
 const router = express.Router();
 const passport = require('passport');
-// rutas 
+// rutas
+
 //horario personal
-router.get('/reportper', async (req, res)=>{
+router.get('/regishor',isAuthenticated,(req, res) => {
+    res.render('registropersonal');
+  });
+
+router.post('/reghoradd',isAuthenticated, async (req, res)=>{
+    const regis = new reg(req.body);
+    await regis.save();
+    res.redirect('/reportper');
+});
+router.get('/reportper',isAuthenticated, async (req, res)=>{
     const regis = await reg.find();
     res.render('reporpers',{
         regis:regis
+    });
+});
+router.get('/edit/:id',isAuthenticated, async (req, res)=>{
+    const { id } = req.params;
+    const regis = await reg.findById(id);
+    res.render('regisperso',{
+        regis
     });
 });
 router.get('/busca', async (req, res)=>{
     const busc = await reg.findOne(req.body.nombre);
     res.render('buscanom',{
         busc
-    });
-});
-//login
-router.get('/ingres',isAuthenticated,(req, res) => {
-    res.render('ingreso');
-  });
-router.post('/add', async (req, res)=>{
-    const regis = new reg(req.body);
-    await regis.save();
-    res.redirect('/reportper');
-});
-router.get('/modificar/:id', async (req, res)=>{
-    const { id } = req.params;
-    const regis = await reg.findById(id);
-    res.render('regisperso',{
-        regis
     });
 });
 router.post('/modif/:id', async (req, res)=>{
@@ -44,10 +46,21 @@ router.get('/eliminar/:id', async (req, res)=>{
     await reg.remove({_id: id});
     res.redirect('/reportper');
 });
-router.get('/chat', (req, res)=>{
-    res.render('asistente');
+
+//login
+router.get('/ingres',isAuthenticated,(req, res) => {
+    res.render('ingreso');
+  });
+
+//Asistente
+router.get('/chat', async (req, res)=>{
+    const ms = await respheri.find();
+    res.render('asistenteres',{
+        ms:ms
+    });
 });
-//agregar mensajes
+
+// mensajes ususario almacenado
 router.post('/addmen', async (req, res)=>{
     const savm = new m();
         savm.title ="Mensaje de Usuario",
@@ -55,16 +68,30 @@ router.post('/addmen', async (req, res)=>{
     await savm.save();
     res.redirect('/chat');
 });
-//agregar respuestas
-router.post('/addres', async (req, res)=>{
+
+//agregar respuestas asistente
+router.post('/addresp', async (req, res)=>{
     const savr = new resp();
         savr.entrada =req.body.entrada,
         savr.salida = req.body.salida
-    await savm.save();
-    res.redirect('/chat');
+    await savr.save();
+    res.redirect('/asisherida');
 });
+router.post('/addresheri', async (req, res)=>{
+    const savheri = new respheri();
+        savheri.entrada =req.body.entrada,
+        savheri.salida = req.body.salida
+    await savheri.save();
+    res.redirect('/asisherida');
+});
+
+//modifica asistente
+router.get('/asisherida',isAuthenticated, (req, res)=>{
+    res.render('asistheridas');
+});
+
 // reportes de mensajes de usuarios 
-router.get('/reportmen', async (req, res)=>{
+router.get('/reportmen',isAuthenticated, async (req, res)=>{
     const men = await m.find();
     res.render('msjusuarios',{
         men:men

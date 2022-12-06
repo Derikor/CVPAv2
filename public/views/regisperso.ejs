@@ -1,61 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>personal</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  <link rel="stylesheet" href="../assets/css/main.css" />
-  <noscript>
-    <link rel="stylesheet" href="../assets/css/noscript.css" />
-  </noscript>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Consultorio_Virtual_de_Primeros_Auxilios</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/png" href="../img/favicon.png" />
+    <!--Bootstrap Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <!--Slick Slider-->
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <!--Web Icon Font Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../css/fontawesome.all.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="../css/helper.css">
+    <link rel="stylesheet" type="text/css" href="../css/icofont.min.css">
+    <!--Animate Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../css/animate.css"><!-- date and time picker -->
+    <link rel="stylesheet" type="text/css" href="../css/jquery.datetimepicker.css">
+    <!--Venobox Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../css/venobox.css">
+    <!--Owl carosul-->
+    <link rel="stylesheet" type="text/css" href="../css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../css/owl.transitions.css">
+    <!--Main Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!--Responsive Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 </head>
 
-<body class="fondoima2">
+<body class="fondo4">
+    <!--Start Preloader-->
+    <div class="site-preloader">
+        <div class="spinner"><img src="../img/loader.gif" alt=""></div>
+    </div>
+    <!--End Preloader-->
+    <!-- Main Menu Area Start -->
+    <header id="mainHeader" class="header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="container"><a class="navbar-brand" href="index.html"><img src="../img/logcvpa.png" alt=""></a><button
+                    class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" >Mensajes de Usuarios</a>
+                            <div class="dropdown-menu" aria-labelledby="service">
+                                <a class="dropdown-item" href="/reportmen">Verificar Mensajes</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Mejorar Asistente</a>
+                            <div class="dropdown-menu" aria-labelledby="service">
+                                <a class="dropdown-item" href="/asisherida">Respuesta a Heridas</a>
+                                <a class="dropdown-item" href="">Respuesta a Hemorragias</a>
+                                <a class="dropdown-item" href="">Respuesta a Quemaduras</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#">Horarios del Personal</a>
+                            <div class="dropdown-menu" aria-labelledby="service">
+                                <a class="dropdown-item" href="/reportper">Verificar Horarios</a>
+                                <a class="dropdown-item" href="/regishor">Registrar Horario</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="call_btn">
+                        <a href="/logout">CERRAR SESIÓN</a>
+                    </div>
 
-  <div class="container w-50 mt-5 mb-5rounded-3 shadow fondoima1">
-    <div class="row">
-      <h2 align="center"> CAMBIAR DATOS</h2>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!------------------------- Main Menu Area End -------------------->
+
+  <div class="container w-50 mt-5 mb-5">
+    <div class="row justify-content-center">
+      <h2 class="row  txtcolor2"> PERSONAL DEL CENTRO</h2>
+      <br><br><br>
       <form action="/modif/<%= regis._id %> " id="personal" method="post">
         <div class="row col-12">
           <div class="section col">
-            <label for="name" class="form-label">COD PERSONAL:</label>
-            <input type="text" name="codp" size="8" placeholder="" required class="border border-dark" value="<% regis.codp %>"/>
+            <label for="name" class="text-white">COD PERSONAL:</label>
+            <input type="text" name="codp" size="10" value="<%= regis.codp %> " required class="border border-dark bg-light"/>
           </div>
           <div class="section col">
-            <label for="date">HORARIO DE TRABAJO</label>
-            <input type="time" name="horadeatencion" required class="border border-dark" value="<% regis.horadeatencion %>"/>
+            <label for="date" class="text-white">HORARIO DE TRABAJO</label>
+            <input type="time" name="horadeatencion" value="<%= regis.horadeatencion %> " required class="border border-dark bg-light"/>
           </div>
           <div class="section col">
-            <label for="name">CARGO:</label>
-            <input class="border border-dark" type="text" name="especialidad" placeholder="" required  value="<% regis.especialidad %>"/>
+            <label for="name" class="text-white">CARGO:</label>
+            <input class="border border-dark bg-light" type="text" name="especialidad" value="<%= regis.especialidad %> " required />
           </div>
         </div>
-
+        <br><br>
         <div class="section">
-          <label for="name">NOMBRE/S:</label>
-          <input type="text" name="nombre" size="28" placeholder="" required class=" w-50 border border-dark" value="<% regis.nombre %>"/>
-        </div>
-        <div class="section">
-          <label for="name">APELLIDO PATERNO:</label>
-          <input type="text" name="appaterno" placeholder="" required class="w-50 border border-dark" value="<% regis.appaterno %>"/>
-        </div>
-        <div class="section">
-          <label for="name">APELLIDO MATERNO:</label>
-          <input type="text" name="apmaterno" placeholder="" required class="w-50 border border-dark" value="<% regis.apmaterno %>"/>
+          <label for="name" class="text-white">NOMBRE/S:</label>
+          <input type="text" name="nombre"  value="<%= regis.nombre %> " required class=" w-50 ml-5 border border-dark bg-light"/>
         </div>
         <br>
         <div class="section">
-          <div align="center"><button class="bg-primary" type="submit" > Modificar los Datos </button>
+          <label for="name" class="text-white">APELLIDO PATERNO:</label>
+          <input type="text" name="appaterno" value="<%= regis.appaterno %> " required class="w-50 border border-dark bg-light"/>
+        </div>
+        <br>
+        <div class="section">
+          <label for="name" class="text-white">APELLIDO MATERNO:</label>
+          <input type="text" name="apmaterno" value="<%= regis.apmaterno %> " required  class="w-50 border border-dark bg-light"/>
+        </div>
+        <br>
+        <div class="section">
+          <label for="name" class="text-white">NÚMERO DE CELULAR:</label>
+          <input type="number" name="numer" value="<%= regis.numer %> " required class="w-50 border border-dark bg-light"/>
+        </div>
+        <br><br>
+        <div class="section">
+          <div align="center"><button class="but1" type="submit" > Modificar los Datos </button>
           </div>
         </div>
         <br>
       </form>
     </div>
   </div>
+
+
+    <!--  Footer Section Start -->
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 col-lg-3">
+                  <div class="widget1">
+                      <div class="logo"><img src="../img/footcvpa.png" class="img-fluid" alt=""></div>
+                      <p>CENTRO DE SALUD "VILLA COOPERATIVA" EL ALTO</p>
+                      <p>Nos encontramos en la Zn. Villa Cooperativa, Av. Periferica</p>
+                      <div class="socialLinks">
+                          <p>Puede buscarnos en nuestros sitios webs</p>
+                          <ul>
+                              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                              <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-7">
+                  <div class="widget2">
+                      <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.04140587605!2d-68.22389598570861!3d-16.473440944409283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915ee0a6a4131fe3%3A0x192812a4a2c1f562!2sCentro%20de%20Salud%20Villa%20Cooperativa!5e0!3m2!1ses!2sbo!4v1634152030001!5m2!1ses!2sbo"
+                      class="container" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                  
+              </div>
+              <div class="col-sm-6 col-lg-2">
+                  <div class="widget3">
+                      <h5> Enlaces Directos</h5>
+                      <ul>
+                          <li><a href="index.html">Inicio</a></li>
+                          <li><a href="">Nosotros</a></li>
+                          <li><a href="">contactos</a></li>
+                          <li><a href="/chat">Asistente Virtual</a></li>
+                          <li><a href="#">Privacidad</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="copyRightArea">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12 text-center">
+                      <p>&copy; Copyright Todos los Derechos Reservados <a href="index.html"
+                              title="bootstrapmb"> Consultorio_Virtual_de_Primeros_Auxilios</a> 2022.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer><!--  Footer Section End -->
+
+  <!--Start ClickToTop-->
+  <div class="totop"><a href="#top">
+          <p><i class="fas fa-angle-up"></i></p>
+      </a></div>
+  <!--End ClickToTop-->
+  <!--jQuery JS-->
+  <script src="../js/jquery.min.js"></script>
+  <!--Bootstrap JS-->
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/popper.js"></script><!-- Way Point js -->
+  <script src="../js/waypoints.min.js"></script><!-- Owl carosul js -->
+  <script src="../js/owl.carousel.min.js"></script><!-- Venobox JS-->
+  <script src="../js/venobox.min.js"></script><!-- date and time picker -->
+  <script src="../js/jquery.datetimepicker.full.min.js"></script>
+  <script src="../js/dateandtimeactive.js"></script>
+  <!--Main-->
+  <script src="../js/main.js"></script>
 </body>
 
 </html>

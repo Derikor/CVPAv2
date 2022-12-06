@@ -122,7 +122,7 @@
                                 <h1 class="caption-title">Consultorio Virtual de Primeros Auxilios</h1>
                                 <p class="caption-desc" id="bie">Bienvenido al Consultorio Virtual dónde podrás aprender sobre los primeros auxilios y ayudar a la
 					                persona en riesgo que lo necesita y asi poder mejorar la asistencia, tambien puedes mensajear con
-					                nuestro <a href="chat.html">asistente robot</a>.
+					                nuestro <a href="/chat">asistente robot</a>.
                                 </p>
                                 <div class="slide-btn"><a class="mybtn" id="b" href="">Leer Contenido</a>
                                 </div>
@@ -189,7 +189,7 @@
     <section id="serviceSection" class="serviceSection">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-9">
+                <div class="col-lg-7">
                     <div class="sectionHeader">
                         <div class="slide-btn"><a class="mybtn" id="leepa" href="">Leer Contenido</a>
                         </div>
@@ -201,6 +201,9 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <br>
+            <br>
             <div class="row">
                 <div class="col-12 serviceSlider owl-carousel">
                     <div class="item">
@@ -318,8 +321,12 @@
 			--df-messenger-button-titlebar-color: #f53a3a;
 		}
 	</style>
-	<df-messenger intent="WELCOME" chat-title="DoctorBot" agent-id="fd6bc19f-5526-46ee-a22e-a3987538a8e4"
-		language-code="es" chat-icon="./img/CENTRO_DE_SALUD/iconbot.png">
+	<df-messenger 
+    intent="WELCOME" 
+    chat-title="DoctorBot" 
+    agent-id="fd6bc19f-5526-46ee-a22e-a3987538a8e4"
+	language-code="es" 
+    chat-icon="./img/CENTRO_DE_SALUD/iconbot.png">
 	</df-messenger>
    <!--chatbot JS-->
 	<script type="text/javascript" src="js/asistent/chatbot.js"></script>

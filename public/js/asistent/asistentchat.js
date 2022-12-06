@@ -175,6 +175,7 @@ function enter(e){
     if (tecla==13)  artyom.simulateInstruction(m.val());
     if (tecla==13) $('#sub').click();
 }
+
 $('#sub').click(function(){artyom.simulateInstruction($('#salida').val())})
 
 

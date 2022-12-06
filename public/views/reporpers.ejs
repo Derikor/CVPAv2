@@ -28,7 +28,7 @@
                         </li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Mejorar Asistente</a>
                             <div class="dropdown-menu" aria-labelledby="service">
-                                <a class="dropdown-item" href="">Respuesta a Heridas</a>
+                                <a class="dropdown-item" href="/asisherida">Respuesta a Heridas</a>
                                 <a class="dropdown-item" href="">Respuesta a Hemorragias</a>
                                 <a class="dropdown-item" href="">Respuesta a Quemaduras</a>
                             </div>
@@ -37,7 +37,7 @@
                         <a class="nav-link dropdown-toggle active" href="#">Horarios del Personal</a>
                             <div class="dropdown-menu" aria-labelledby="service">
                                 <a class="dropdown-item active" href="/reportper">Verificar Horarios</a>
-                                <a class="dropdown-item" href="">Registrar Horario</a>
+                                <a class="dropdown-item" href="/regishor">Registrar Horario</a>
                             </div>
                         </li>
                     </ul>
@@ -76,6 +76,7 @@
           <th class="table-primary">Personal</th>
           <th class="table-primary">Horario</th>
           <th class="table-primary">Especialidad</th>
+          <th class="table-primary">CELULAR</th>
           <th class="table-primary">Operacion</th>
         </tr>
       </thead>
@@ -87,8 +88,9 @@
                  <td><%= regis[i].nombre%>&nbsp;&nbsp;&nbsp;&nbsp;<%= regis[i].appaterno%>&nbsp;&nbsp;&nbsp;&nbsp;<%= regis[i].apmaterno%> </td>
                  <td><%= regis[i].horadeatencion %> </td>
                  <td><%= regis[i].especialidad %> </td>
+                 <td><%= regis[i].numer %> </td>
                  <td>
-                     <a href="/modificar/<%= regis[i]._id %>" class="btn btn-primary">Modificar</a>
+                     <a href="/edit/<%= regis[i]._id %>" class="btn btn-primary">Modificar</a>
                      <a href="/eliminar/<%= regis[i]._id %>" class="btn btn-danger">Eliminar</a>
                  </td>
              </tr>

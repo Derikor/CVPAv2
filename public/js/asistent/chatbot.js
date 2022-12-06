@@ -1,7 +1,7 @@
 //window.addEventListener('dfMessengerLoaded', function(event){
-const dfMessenger = document.querySelector('df-messenger');
+//const dfMessenger = document.querySelector('df-messenger');
 
-   dfMessenger.addEventListener('df-user-input-entered', function (event) {
+   /*dfMessenger.addEventListener('df-user-input-entered', function (event) {
        var men = event.detail.input;
        const m = require('../models/User_Message');
         let mensaje = new m({
@@ -13,8 +13,8 @@ const dfMessenger = document.querySelector('df-messenger');
             console.log("Se creo un mensaje nuevo:", res);
           });
     console.log("mensaje escrito:  "+ men);
-    });
-
+    });*/
+//});
 
     /*function savemensaje(){
         let mensaje = new m({

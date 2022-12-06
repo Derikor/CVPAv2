@@ -135,7 +135,7 @@ setTimeout(function(){// Esperar 250ms para inicializar
     artyom.initialize({
        lang: "es-ES",// Más lenguajes son soportados
        continuous:true,// Artyom obedecera por siempre
-       executionKeyword: "y",
+       executionKeyword: "",
        listen:true, // Iniciar !
        debug:true, // Muestra un informe en la consola
        speed:1 // Habla normalmente
