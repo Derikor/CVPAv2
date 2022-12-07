@@ -321,15 +321,15 @@ setTimeout(function(){// Esperar 250ms para inicializar
             }
             if (i==1){
                 artyom.say("abriendo ventana de quemaduras",{lang:"es-ES"});   
-                window.open("quemadura.html",'_top');
+                window.open("quemaduras.html",'_top');
             }
             if (i==2){
                 artyom.say("abriendo ventana de hemorragias",{lang:"es-ES"});   
-                window.open("hemorragia.html",'_top');
+                window.open("hemorragias.html",'_top');
             }
             if (i==3){
                 artyom.say("abriendo ventana de heridas",{lang:"es-ES"});   
-                window.open("herida.html",'_top');
+                window.open("heridas.html",'_top');
             }
             if (i==4 || i==5){
                 artyom.say("abriendo ventana de asistente",{lang:"es-ES"});   

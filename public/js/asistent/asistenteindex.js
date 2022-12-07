@@ -57,15 +57,15 @@ artyom.addCommands([
             }
             if (i==2 || i==3){
                 artyom.say("abriendo ventana de quemaduras",{lang:"es-ES"});   
-                window.open("quemadura.html",'_top');
+                window.open("quemaduras.html",'_top');
             }
             if (i==4 || i== 5){
                 artyom.say("abriendo ventana de hemorragias",{lang:"es-ES"});   
-                window.open("hemorragia.html",'_top');
+                window.open("hemorragias.html",'_top');
             }
             if (i==6 || i==7){
                 artyom.say("abriendo ventana de heridas",{lang:"es-ES"});   
-                window.open("herida.html",'_top');
+                window.open("heridas.html",'_top');
             }
             if (i==8 || i==9){
                 artyom.say("abriendo ventana de asistente",{lang:"es-ES"});   
