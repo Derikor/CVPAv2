@@ -3,7 +3,7 @@
 
 <%- include('part/head') %> 
 
-<body >
+<body class="fondohemo">
     <!--Start Preloader-->
     <div class="site-preloader">
         <div class="spinner"><img src="img/loader.gif" alt=""></div>
@@ -37,7 +37,7 @@
                         <a class="nav-link dropdown-toggle" href="#">Horarios del Personal</a>
                             <div class="dropdown-menu" aria-labelledby="service">
                                 <a class="dropdown-item" href="/reportper">Verificar Horarios</a>
-                                <a class="dropdown-item" href="/regishor">Registrar Horario</a>
+                                <a class="dropdown-item" href="">Registrar Horario</a>
                             </div>
                         </li>
                     </ul>
@@ -50,13 +50,29 @@
         </nav>
     </header>
     <!------------------------- Main Menu Area End -------------------->
+    <br><br><br>
 
+        <h2 class="row justify-content-center txtcolor">ASISTENTE PARA HEMORRAGIAS</h2>
+        <br>
+        <p class="row justify-content-center p-3 txtcolor1">En esta sección coloque la pregunta 
+            del usuario que probablemente pueda textear</p>
 
-
-
-
-
-
+        <form action="/addreshemo" method="post">
+            <div class="text-center">
+              <input type="text" class="form-control-lg txt1" name="entrada" id="" required>
+            </div>
+              <br><br>
+        <p class="row justify-content-center p-3 txtcolor1">En esta sección coloque la respuesta para 
+            la pregunta en la parte de arriba</p>
+            <div class="text-center">
+              <textarea  class="form-control-lg txt2" name="salida" id="" required></textarea>
+            </div>
+            <br><br>
+                <div class="row justify-content-center">
+                    <button class="but1" type="submit">GUARDAR CONSULTA</button>
+                </div>
+        </form>
+        <br><br><br>
 
     <%- include('part/footer') %> 
 

@@ -9,6 +9,7 @@ const Horario_de_Especialidad = new Schema({
     apmaterno: String,
     especialidad: String,
     horadeatencion: String,
+    horadesalida: String,
     numer: String
   });
 

@@ -53,3 +53,15 @@ app.post('df-user-input-entered',(req,res)=>{
             res.status(200).send({mensaje: mensajeStored})
         });
 })*/
+
+window.addEventListener('dfMessengerLoaded', function(){
+
+const dfMessenger = document.querySelector('df-messenger');
+dfMessenger.addEventListener('df-user-input-entered', function (event) {
+   var msjid = event.detail.input;
+   console.log(msjid);
+   //savemensaje(msjid);
+});
+
+});
+//import {savemensaje} from '../msgu';

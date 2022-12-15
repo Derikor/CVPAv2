@@ -19,9 +19,9 @@ async function runSample(projectId = 'doctorbot-kpxm') {
     queryInput: {
       text: {
         // The query to send to the dialogflow agent
-        text: 'hello',
+        text: 'hola',
         // The language used by the client (en-US)
-        languageCode: 'en-US',
+        languageCode: 'es-ES',
       },
     },
   };

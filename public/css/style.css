@@ -93,10 +93,6 @@ p {
 .affix {
   width: 100%;
 }
-#map {
-  width: 100%;
-  height: 500px;
-}
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
   padding: 0px;
@@ -351,7 +347,7 @@ header.header {
 } /* =============================================3.2 Slider Area Start================================================ */
 #slider-area .sbanner {
   position: relative;
-  background: url(../img/banner/doctor.png) no-repeat;
+  background: url(../img/CENTRO_DE_SALUD/cvpa.png) no-repeat;
   background-position: bottom right;
 }
 #slider-area {
@@ -834,11 +830,9 @@ header.header {
   background: #ff6666;
   color: #fff;
 } /* ================================================3.7 Get a Call End=================================================== */ /* ================================================3.8  Testimonial Area Start===================================================*/
-.testimonial {
-  padding: 114px 0px 120px;
-}
+
 .testimonial .sectionHeader {
-  margin-bottom: 77px;
+  margin-bottom: 100px;
 }
 .testimonial .leftSlider {
   text-align: center;
@@ -901,7 +895,7 @@ header.header {
   font-weight: 400;
 }
 .testimonial .rightSlider .item {
-  border-left: 4px solid #00b28a;
+  border-left: 4px solid #ff4949;
   border-top: 2px solid #ccf0e8;
   border-right: 2px solid #ccf0e8;
   border-bottom: 2px solid #ccf0e8;
@@ -919,11 +913,11 @@ header.header {
   margin-bottom: 0px;
 }
 .testimonial .rightSlider .item:hover {
-  border-left: 4px solid #f66;
+  border-left: 4px solid rgb(255, 255, 102);
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
 }
 .testimonial .rightSlider li.active .item {
-  border-left: 4px solid #f66;
+  border-left: 4px solid rgb(255, 255, 102);
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
 }
 .testimonial .rightSlider .item:hover .right img {
@@ -1136,6 +1130,48 @@ header.header {
 .totop > a p:hover {
   color: #fff;
 }/*====================================================4  About Section Start ======================================================*/ /* =================================================== 4.1  BreadCrumb Area Start =====================================================*/
+.contac {
+  padding: 150px 0px 145px;
+  background: url(../img/CENTRO_DE_SALUD/c5.jpeg) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+.contac .bcoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.367);
+}
+.contac h2 {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  font-size: 40px;
+  line-height: 50px;
+}
+.contac .links li {
+  display: inline-block;
+}
+.contac .links li a {
+  color: #fff;
+  font-size: 16px;
+}
+.contac .links li a:hover,
+.contac .links li a.active {
+  color: rgb(255, 255, 102);
+}
+.contac .links li span {
+  display: inline-block;
+  padding: 0px 6px;
+  color: #fff;
+}
+.contac.extraPaddimg {
+  padding-bottom: 148px;
+}
+
 .heri {
   padding: 139px 0px 145px;
   background: url(../img/PRIM_AUX/heridas/collherida.jpg) no-repeat center;

@@ -849,6 +849,12 @@
   .txt2{
     width: 380px;
   }
+  .rightSlider .item .left .leftInner .align-self-center h5{
+    font-size: 14px;
+  }
+  .rightSlider .item .align-self-center h5{
+    font-size: 12px;
+  }
 }
 @media (max-width: 384px) {
   #slider-area .slide-caption h1 {

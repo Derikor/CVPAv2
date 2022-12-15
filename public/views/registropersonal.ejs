@@ -27,11 +27,11 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Mejorar Asistente</a>
-                            <div class="dropdown-menu" aria-labelledby="service">
-                                <a class="dropdown-item" href="/asisherida">Respuesta a Heridas</a>
-                                <a class="dropdown-item" href="">Respuesta a Hemorragias</a>
-                                <a class="dropdown-item" href="">Respuesta a Quemaduras</a>
-                            </div>
+                          <div class="dropdown-menu" aria-labelledby="service">
+                            <a class="dropdown-item" href="/asisherida">Respuesta a Heridas</a>
+                            <a class="dropdown-item" href="/asishemorragia">Respuesta a Hemorragias</a>
+                            <a class="dropdown-item" href="/asisquemaduras">Respuesta a Quemaduras</a>
+                          </div>
                         </li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#">Horarios del Personal</a>
@@ -65,6 +65,11 @@
           <div class="section col">
             <label for="date" class="text-white">HORARIO DE TRABAJO</label>
             <input type="time" name="horadeatencion" required class="border border-dark bg-light"/>
+            &nbsp;
+            <input type="time" name="horadesalida" required class="border border-dark bg-light"/>
+            <label for="date" class="text-white">Entrada</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="date" class="text-white">Salida</label>
           </div>
           <div class="section col">
             <label for="name" class="text-white">CARGO:</label>
@@ -73,8 +78,8 @@
         </div>
         <br><br>
         <div class="section">
-          <label for="name" class="text-white">NOMBRE/S:</label>
-          <input type="text" name="nombre"  placeholder="" required class=" w-50 ml-5 border border-dark bg-light"/>
+          <label for="name" class="text-white">NOMBRE/S:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" name="nombre"  placeholder="" required class=" w-50 border border-dark bg-light"/>
         </div>
         <br>
         <div class="section">

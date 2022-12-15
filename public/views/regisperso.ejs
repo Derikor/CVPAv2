@@ -57,11 +57,11 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Mejorar Asistente</a>
-                            <div class="dropdown-menu" aria-labelledby="service">
-                                <a class="dropdown-item" href="/asisherida">Respuesta a Heridas</a>
-                                <a class="dropdown-item" href="">Respuesta a Hemorragias</a>
-                                <a class="dropdown-item" href="">Respuesta a Quemaduras</a>
-                            </div>
+                          <div class="dropdown-menu" aria-labelledby="service">
+                            <a class="dropdown-item" href="/asisherida">Respuesta a Heridas</a>
+                            <a class="dropdown-item" href="/asishemorragia">Respuesta a Hemorragias</a>
+                            <a class="dropdown-item" href="/asisquemaduras">Respuesta a Quemaduras</a>
+                          </div>
                         </li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#">Horarios del Personal</a>
@@ -94,6 +94,11 @@
           <div class="section col">
             <label for="date" class="text-white">HORARIO DE TRABAJO</label>
             <input type="time" name="horadeatencion" value="<%= regis.horadeatencion %> " required class="border border-dark bg-light"/>
+            &nbsp;
+            <input type="time" name="horadesalida" value="<%= regis.horadesalida %> " required class="border border-dark bg-light"/>
+            <label for="date" class="text-white">Entrada</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="date" class="text-white">Salida</label>
           </div>
           <div class="section col">
             <label for="name" class="text-white">CARGO:</label>
@@ -122,11 +127,13 @@
         </div>
         <br><br>
         <div class="section">
-          <div align="center"><button class="but1" type="submit" > Modificar los Datos </button>
+          <div align="center"><button class="but1" type="submit" > Modificar los Datos </button>&nbsp;
+            <button class="but1" type="submit" ><a class="text-white" href="/reportper">CANCELAR</a></button>
           </div>
         </div>
         <br>
       </form>
+      
     </div>
   </div>
 

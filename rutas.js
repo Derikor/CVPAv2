@@ -1,8 +1,9 @@
 const express = require('express');
 const reg = require('./public/models/horario_especialidad');
 const m = require('./public/models/User_Message');
-const resp = require('./public/models/asistentechat');
+const resphemo = require('./public/models/asistentehemorragias');
 const respheri = require('./public/models/asistenteheridas');
+const respquema = require('./public/models/asistentequemaduras');
 const router = express.Router();
 const passport = require('passport');
 // rutas
@@ -36,7 +37,7 @@ router.get('/busca', async (req, res)=>{
         busc
     });
 });
-router.post('/modif/:id', async (req, res)=>{
+router.post('/modif/:id',isAuthenticated, async (req, res)=>{
     const { id } = req.params;
     await reg.update({_id: id}, req.body);
     res.redirect('/reportper');
@@ -70,13 +71,6 @@ router.post('/addmen', async (req, res)=>{
 });
 
 //agregar respuestas asistente
-router.post('/addresp', async (req, res)=>{
-    const savr = new resp();
-        savr.entrada =req.body.entrada,
-        savr.salida = req.body.salida
-    await savr.save();
-    res.redirect('/asisherida');
-});
 router.post('/addresheri', async (req, res)=>{
     const savheri = new respheri();
         savheri.entrada =req.body.entrada,
@@ -84,10 +78,30 @@ router.post('/addresheri', async (req, res)=>{
     await savheri.save();
     res.redirect('/asisherida');
 });
+router.post('/addreshemo', async (req, res)=>{
+    const savhemo = new resphemo();
+        savhemo.entrada =req.body.entrada,
+        savhemo.salida = req.body.salida
+    await savr.save();
+    res.redirect('/asishemorragia');
+});
+router.post('/addresquemo', async (req, res)=>{
+    const savquemo = new respquema();
+        savquemo.entrada =req.body.entrada,
+        savquemo.salida = req.body.salida
+    await savr.save();
+    res.redirect('/asisquemaduras');
+});
 
 //modifica asistente
 router.get('/asisherida',isAuthenticated, (req, res)=>{
     res.render('asistheridas');
+});
+router.get('/asishemorragia',isAuthenticated, (req, res)=>{
+    res.render('asisthemorragias');
+});
+router.get('/asisquemaduras',isAuthenticated, (req, res)=>{
+    res.render('asistquemaduras');
 });
 
 // reportes de mensajes de usuarios 
@@ -149,5 +163,12 @@ router.post('/inises', passport.authenticate('inicio', {
     failureRedirect: '/logeoper',
     failureFlash: true
   }));
+//contactos
+router.get('/contact', async (req, res)=>{
+    const regis = await reg.find();
+    res.render('contactos',{
+        regis:regis
+    });
+});
 
 module.exports = router

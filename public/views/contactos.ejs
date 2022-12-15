@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Consultorio_Virtual_de_Primeros_Auxilios</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <!--Bootstrap Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!--Slick Slider-->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <!--Web Icon Font Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="css/helper.css">
+    <link rel="stylesheet" type="text/css" href="css/icofont.min.css">
+    <!--Animate Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/animate.css"><!-- date and time picker -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css">
+    <!--Venobox Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/venobox.css">
+    <!--Owl carosul-->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+    <!--Main Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--Responsive Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+</head>
+
+<body>
+    <!--Start Preloader-->
+    <div class="site-preloader">
+        <div class="spinner"><img src="img/loader.gif" alt=""></div>
+    </div>
+    <!--End Preloader-->
+    <!-- Main Menu Area Start -->
+    <header id="mainHeader" class="header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="container"><a class="navbar-brand" href="index.html"><img src="img/logcvpa.png"
+                        alt=""></a><button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" id="inicio" href="index.html">Inicio</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="primaux" href="#">Primeros Auxilios</a>
+                            <div class="dropdown-menu" aria-labelledby="service">
+                                <a class="dropdown-item" id="definicion" href="#leepa">Definición</a>
+                                <a class="dropdown-item" id="heridas" href="heridas.html">Heridas</a>
+                                <a class="dropdown-item" id="hemorragias" href="hemorragias.html">Hemorragias</a>
+                                <a class="dropdown-item" id="quemaduras" href="quemaduras.html">Quemaduras</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="conversar" href="#">Asistente Virtual</a>
+                            <div class="dropdown-menu" aria-labelledby="pages">
+                                <a class="dropdown-item" id="con" href="/chat">Conversar</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Nosotros</a>
+                            <div class="dropdown-menu" aria-labelledby="service">
+                                <a class="dropdown-item" href="">Acerca de</a>
+                                <a class="dropdown-item  active" href="contacto.html">Contáctanos</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="call_btn"><a id="inisesion" href="/log">Iniciar Sesión</a></div>
+                </div>
+            </div>
+        </nav>
+    </header><!-- Main Menu Area End -->
+    <!-- area fond -->
+    <section id="" class="contac">
+        <div class="bcoverlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="Content">
+                        <h2>Contáctanos</h2>
+                        <div class="links">
+                            <ul>
+                                <li><a href="index.html">Inicio</a></li>
+                                <li><span>/</span></li>
+                                <li><a class="active" href="contacto.html">Contáctanos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Area fond end  -->
+    <!--Start area Contact -->
+    <div class="contact-wrap">
+        <div class="container">
+            <div class="row address">
+                <div class="col-lg-8">
+                    <section id="" class="testimonial">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-9">
+                                    <div class="sectionHeader">
+                                        <h2>contáctanos</h2>
+                                        <p>Bienvenido a la agenda de contactos del centro de salud en esta sacción estan
+                                            todos
+                                            los números del personal del centro para que pueda contactarse segun a los
+                                            horarios disponibles
+                                            por favor tome en cuenta la seriedad con la que se comunica y realice su
+                                            consuta.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rightSlider">
+                                <% for( var i=0; i < regis.length; i++ ) { %>
+                                    <ul id="">
+                                        <li data-owl-item="1">
+                                            <a href="https://api.whatsapp.com/send?phone=<%= regis[i].numer %>&text=Hola, quiero realizar una consulta">
+                                                <div class="item">
+                                                    <div class="left">
+                                                        <div class="leftInner"><img src="img/CENTRO_DE_SALUD/whpp.png"
+                                                                alt="">
+                                                            <div class="info align-self-center">
+                                                                <h5>
+                                                                    <%= regis[i].nombre%> <br>
+                                                                        <%= regis[i].appaterno%>&nbsp;<%=
+                                                                                regis[i].apmaterno%>
+                                                                </h5>
+                                                                <p>
+                                                                    <%= regis[i].especialidad %>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info align-self-center">
+                                                        <h5>
+                                                            <%= regis[i].numer %> <br> consultar <br> <%= regis[i].horadeatencion %>&nbsp;-&nbsp;<%= regis[i].horadesalida%>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="right">
+                                                        <div class="rightInner">
+                                                            <img class="aimg-fluid" src="img/CENTRO_DE_SALUD/mensaje.png"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <% } %>
+                                    </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#mapcv">
+                                <div class="media">
+                                    <div class="left align-self-center mr-3"><i class="pe-7s-map-marker"></i></div>
+
+                                    <div class="media-body">
+                                        <h4>Encuéntranos</h4>
+                                        <p>GQGH+J8F, El Alto</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <div class="media">
+                                <div class="left align-self-center mr-3"><i class="pe-7s-map-marker"></i></div>
+                                <div class="media-body">
+                                    <h4>Hospitales y Clinicas Recomendados</h4>
+                                    <p><a href="https://goo.gl/maps/fTJwLinR1PtyWgSZA">Hospital del Norte</a></p>
+                                    <br>
+                                    <p><a href="https://goo.gl/maps/38ntDKkZNJQL21Gi9">Clínica Cruz Azul</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="media">
+                                <div class="left align-self-center mr-3"><i class="pe-7s-mail"></i></div>
+                                <div class="media-body">
+                                    <h4>EMAILS</h4>
+                                    <p><a href="mailto:doctor@gmail.com">doctor@gmail.com</a></p>
+                                    <br>
+                                    <p><a href="mailto:ejemplo2@gmail.com">ejemplo2@gmail.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--End Area Contact-->
+
+    <!--  Footer Section Start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="widget1">
+                        <div class="logo"><img src="img/footcvpa.png" class="img-fluid" alt=""></div>
+                        <p>CENTRO DE SALUD "VILLA COOPERATIVA" EL ALTO</p>
+                        <p>Nos encontramos en la Zn. Villa Cooperativa, Av. Periferica</p>
+                        <div class="socialLinks">
+                            <p>Puede buscarnos en nuestros sitios webs</p>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <div class="widget2" id="mapcv">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.04140587605!2d-68.22389598570861!3d-16.473440944409283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915ee0a6a4131fe3%3A0x192812a4a2c1f562!2sCentro%20de%20Salud%20Villa%20Cooperativa!5e0!3m2!1ses!2sbo!4v1634152030001!5m2!1ses!2sbo"
+                            class="container" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <div class="widget3">
+                        <h5> Enlaces Directos</h5>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="">Nosotros</a></li>
+                            <li><a href="contacto.html">contactos</a></li>
+                            <li><a href="/chat">Asistente Virtual</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyRightArea">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p>&copy; Copyright Todos los Derechos Reservados <a href="index.html" title="bootstrapmb">
+                                Consultorio_Virtual_de_Primeros_Auxilios</a> 2022.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!--  Footer Section End -->
+    <!--Start ClickToTop-->
+    <div class="totop"><a href="#top">
+            <p><i class="fas fa-angle-up"></i></p>
+        </a></div>
+    <!--End ClickToTop-->
+    <!--jQuery JS-->
+    <script src="js/jquery.min.js"></script>
+    <!--Bootstrap JS-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.js"></script><!-- Way Point js -->
+    <script src="js/waypoints.min.js"></script><!-- Owl carosul js -->
+    <script src="js/owl.carousel.min.js"></script><!-- Venobox JS-->
+    <script src="js/venobox.min.js"></script><!-- date and time picker -->
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
+    <script src="js/dateandtimeactive.js"></script>
+    <!--Main-->
+    <script src="js/main.js"></script>
+    <!--artyom JS-->
+    <script src="js/artyom.js"></script>
+    <script src="js/artyom.window.js"></script>
+    <script src="js/artyom.window.min.js"></script>
+    <!--asistente JS-->
+    <script src="js/asistent/asistenteindex.js"></script>
+    <!--dialogflow JS-->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <style>
+        df-messenger {
+            --df-messenger-button-titlebar-color: #f53a3a;
+        }
+    </style>
+    <df-messenger intent="WELCOME" chat-title="DoctorBot" agent-id="fd6bc19f-5526-46ee-a22e-a3987538a8e4"
+        language-code="es" chat-icon="./img/CENTRO_DE_SALUD/iconbot.png">
+    </df-messenger>
+    <!--chatbot JS-->
+    <script type="text/javascript" src="./js/asistent/chatbot.js"></script>
+</body>
+
+</html>
