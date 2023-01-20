@@ -22,6 +22,9 @@ $('#inisesion').mouseover(function(){artyom.say("iniciar sesión",{lang:"es-ES"}
 $('#leequema').mouseover(function(){artyom.say("Leer el contenido")})
 $('#q1').mouseover(function(){artyom.say("quemaduras",{lang:"es-ES"})})
 $('#q1').mouseout(function(){artyom.shutUp()})
+$('#lee1').mouseover(function(){artyom.say("Leer el contenido")})
+$('#lee2').mouseover(function(){artyom.say("Leer el contenido")})
+$('#lee3').mouseover(function(){artyom.say("Leer el contenido")})
 
 function detente(){
     artyom.shutUp()
@@ -160,27 +163,16 @@ setTimeout(function(){// Esperar 250ms para inicializar
         indexes: ['Hola','buen día','buenos días','buenas tardes','buenas noches'],
         action: function(i){
             if (i==0){
-                artyom.say("Bienvenido dime cual es su consulta");   
+                artyom.say("Bienvenido a la ventana de quemaduras");   
             }
             if (i==1 || i==2){
-                artyom.say("Hola, buenos dias");   
+                artyom.say("buenos dias, Bienvenido a la ventana de quemaduras");   
             }
             if (i==3){
-                artyom.say("Hola, buenas tardes");   
+                artyom.say("buenas tardes, Bienvenido a la ventana de quemadauras");   
             }
             if (i==4){
-                artyom.say("Hola, buenas noches");   
-            }
-         }
-    },
-    {
-        indexes: ['Hola','buen dia'],
-        action: function(i){
-            if (i==0){
-                artyom.say("Hola que tal");   
-            }
-            if (i==2){
-                artyom.say("Hola, buenos dias");   
+                artyom.say("buenas noches, Bienvenido a la ventana de quemaduras");   
             }
          }
     },
@@ -305,3 +297,87 @@ setTimeout(function(){// Esperar 250ms para inicializar
          }
     },
  ]);
+
+ 
+/*----------------------------pop------------------------------
+--------------------------------------------------------------*/
+var btabrir = document.getElementById('btn-abrir'),
+    over = document.getElementById('over'),
+    pop = document.getElementById('pop'),
+    cer = document.getElementById('cer');
+
+btabrir.addEventListener('click',function(){
+    over.classList.add('active');
+    pop.classList.add('active');
+});
+cer.addEventListener('click',function(){
+    over.classList.remove('active');
+    pop.classList.remove('active');
+});
+var btabrir1 = document.getElementById('btn-abrir1'),
+    over1 = document.getElementById('over1'),
+    pop1= document.getElementById('pop1'),
+    cer1 = document.getElementById('cer1');
+
+btabrir1.addEventListener('click',function(){
+    over1.classList.add('active');
+    pop1.classList.add('active');
+});
+cer1.addEventListener('click',function(){
+    over1.classList.remove('active');
+    pop1.classList.remove('active');
+});
+
+var btabrir2 = document.getElementById('btn-abrir2'),
+    over2 = document.getElementById('over2'),
+    pop2 = document.getElementById('pop2'),
+    cer2 = document.getElementById('cer2');
+
+btabrir2.addEventListener('click',function(){
+    over2.classList.add('active');
+    pop2.classList.add('active');
+});
+cer2.addEventListener('click',function(){
+    over2.classList.remove('active');
+    pop2.classList.remove('active');
+});
+var btabrir3 = document.getElementById('btn-abrir3'),
+    over3 = document.getElementById('over3'),
+    pop3= document.getElementById('pop3'),
+    cer3 = document.getElementById('cer3');
+
+btabrir3.addEventListener('click',function(){
+    over3.classList.add('active');
+    pop3.classList.add('active');
+});
+cer3.addEventListener('click',function(){
+    over3.classList.remove('active');
+    pop3.classList.remove('active');
+});
+
+var btabrir4 = document.getElementById('btn-abrir4'),
+    over4 = document.getElementById('over4'),
+    pop4 = document.getElementById('pop4'),
+    cer4 = document.getElementById('cer4');
+
+btabrir4.addEventListener('click',function(){
+    over4.classList.add('active');
+    pop4.classList.add('active');
+});
+cer4.addEventListener('click',function(){
+    over4.classList.remove('active');
+    pop4.classList.remove('active');
+});
+var btabrir5 = document.getElementById('btn-abrir5'),
+    over5 = document.getElementById('over5'),
+    pop5= document.getElementById('pop5'),
+    cer5 = document.getElementById('cer5');
+
+btabrir5.addEventListener('click',function(){
+    over5.classList.add('active');
+    pop5.classList.add('active');
+});
+cer5.addEventListener('click',function(){
+    over5.classList.remove('active');
+    pop5.classList.remove('active');
+});

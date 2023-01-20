@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,15 +43,15 @@
     <header id="mainHeader" class="header">
         <!-- Start Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light p-0">
-            <div class="container"><a class="navbar-brand" href="index.html"><img src="img/logcvpa.png" alt=""></a><button
-                    class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="index.html"><img src="img/logcvpa.png"
+                        alt=""></a><button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" id="inicio" href="index.html">Inicio</a></li>
                         <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" id="primaux" href="#" >Primeros Auxilios</a>
+                            <a class="nav-link dropdown-toggle active" id="primaux" href="#">Primeros Auxilios</a>
                             <div class="dropdown-menu" aria-labelledby="service">
                                 <a class="dropdown-item" id="definicion" href="index.html#leepa">Definición</a>
                                 <a class="dropdown-item" id="heridas" href="heridas.html">Heridas</a>
@@ -59,7 +60,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="conversar" href="#">Asistente Virtual</a>
+                            <a class="nav-link dropdown-toggle" id="conversar" href="#">Asistente Virtual</a>
                             <div class="dropdown-menu" aria-labelledby="pages">
                                 <a class="dropdown-item" id="con" href="/chat">Conversar</a>
                             </div>
@@ -83,7 +84,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="Content">
-                        <h2>QUEMADURAS</h2>
+                        <h2 id="q1">QUEMADURAS</h2>
                         <div class="links">
                             <ul>
                                 <li><a href="index.html">Inicio</a></li>
@@ -107,57 +108,153 @@
                         <br>
                         <h2> DEFINICIÓN</h2>
                         <p id="quema">
-                            Una quemadura es una lesión en tejidos vivos causada por la acción de diversos agentes, se manifiestan desde un enrojecimiento hasta la destrucción total de las estructuras afectadas, siendo la piel, el órgano que con más frecuencia sufre este tipo de lesiones, que resulta de la exposición a llamas o líquidos calientes, contacto con objetos calientes, con cáusticos, químicos o radiación, efecto de la corriente eléctrica o de noxas biológicas.
+                            Una quemadura es una lesión en tejidos vivos causada por la acción de diversos agentes, se
+                            manifiestan desde un enrojecimiento hasta la destrucción total de las estructuras afectadas,
+                            siendo la piel, el órgano que con más frecuencia sufre este tipo de lesiones, que resulta de
+                            la exposición a llamas o líquidos calientes, contacto con objetos calientes, con cáusticos,
+                            químicos o radiación, efecto de la corriente eléctrica o de noxas biológicas.
                         </p>
                     </div>
                 </div>
             </div>
             <div>
-                    <h2 class="text-dark">Clasificación de las Quemaduras</h2>
-                    <br>
-                    <p id="clasquema">
-                        Las Quemaduras pueden clasificarse por su nivel de grado que son: de primer grado, de segundo grado, y de tercer grado.
-                        </p>
-                    <br>
-            </div>   
+                <h2 class="text-dark">Clasificación de las Quemaduras</h2>
+                <br>
+                <p id="clasquema">
+                    Las Quemaduras pueden clasificarse por su nivel de grado que son: de primer grado, de segundo grado,
+                    y de tercer grado.
+                </p>
+                <br>
+            </div>
             <div class="row">
                 <div class="col-md-6 col-lg-4">
                     <div class="box">
-                        <div><img src="img/PRIM_AUX/quemaduras/primergrado.jpg" alt="" width="100%"></div><a href="serviceDetails.html">
+                        <div><img src="img/PRIM_AUX/quemaduras/primergrado.jpg" alt="" width="100%"></div>
                             <br>
                             <div class="slide-btn"><a class="mybtn" id="lee1" href="">Leer Contenido</a>
                             </div>
                             <h4 id="lee1t">Quemaduras de Primer Grado</h4>
                         </a>
-                        <p id="lee1p">
-                            Son aquellas que afectan solo la capa externa de la piel. Causan dolor, enrojecimiento e hinchazón, debido a contactos ligeros con objetos caliente.
+                        <p id="lee1p"> 
+                            Son aquellas que afectan solo la capa externa de la piel. Causan dolor, enrojecimiento e
+                            hinchazón, debido a contactos ligeros con objetos caliente.
+                            <br><button id="btn-abrir" class="btn-pop">Síntomas</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="btn-abrir1" class="btn-pop">Asistencia</button>
                         </p>
+                        <div class="over" id="over">
+                            <div class="pop" id="pop">
+                                <a href="#imag" class="cer" id="cer"><i class="fas fa-times text-dark"></i></a>
+                                <h2>SÍNTOMAS</h2>
+                                <p class="paraf">Algunos síntomas que se pueden dar en las quemaduras de primer grado son los siguientes:
+                                    <li>Enrojecimiento</li>
+                                    <li>Piel Seca</li>
+                                    <li>Desprendimiento de la piel</li>
+                                    <li>La piel presenta dolores al tacto</li>
+                                    <li>El dolor generalmente puede durar de 2 a 3 dias</li>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="over" id="over1">
+                            <div class="pop" id="pop1">
+                                <a href="#imag" class="cer" id="cer1"><i class="fas fa-times text-dark"></i></a>
+                                <h2>ASISTENCIA</h2>
+                                <p class="paraf">Generalmente las quemaduras de primer grado se curan por si solas pasado una semana,
+                                    pero la asistencia puede depender de la severidad de la quemadura para ello se
+                                    recomienda:
+                                    <li>Lavarse las manos antes de realizar los protocolos asistencia</li>
+                                    <li>Luego coloque la zona afectada por la quemadura sobre abundante agua de 5 a 10
+                                        min</li>
+                                    <li>Nunca colocar hielo en el area afectada</li>
+                                    <li>Cubrir la zona con gasas y vendajes sin presionar el area de la quemadura</li>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="box">
-                        <div><img src="img/PRIM_AUX/quemaduras/segundogrado.jpg" alt="" width="100%"></div><a href="serviceDetails.html">
+                    <div class="box" id="box">
+                        <div><img src="img/PRIM_AUX/quemaduras/segundogrado.jpg" alt="" width="100%"></div>
                             <br>
                             <div class="slide-btn"><a class="mybtn" id="lee2" href="">Leer Contenido</a>
                             </div>
                             <h4 id="lee2t">Quemaduras de Segundo Grado</h4>
                         </a>
                         <p id="lee2p">
-                            Las quemaduras de segundo grado afectan ambas capas, la capa externa y la capa subyacente de la piel. Causan dolor, enrojecimiento, hinchazón y ampollas. También se llaman quemaduras de espesor parcial.
+                            Las quemaduras de segundo grado afectan ambas capas, la capa externa y la capa subyacente de
+                            la piel. Causan dolor, enrojecimiento, hinchazón y ampollas. También se llaman quemaduras de
+                            espesor parcial.
+                            <br><button id="btn-abrir2" class="btn-pop">Síntomas</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="btn-abrir3" class="btn-pop">Asistencia</button>
                         </p>
+                        <div class="over" id="over2">
+                            <div class="pop" id="pop2">
+                                <a href="#imag" class="cer" id="cer2"><i class="fas fa-times text-dark"></i></a>
+                                <h2>SÍNTOMAS</h2>
+                                <p class="paraf">Algunos síntomas que se pueden dar en las quemaduras de segundo grado son los siguientes:
+                                    <li>La herida por la quemadura tiene apariencia húmeda</li>
+                                    <li>Ampollas</li>
+                                    <li>Dolor intenso</li>
+                                    <li>Piel sensible al rosamiento generando dolor</li>
+                                    <li>El color de la piel se vuelve roja o café oscuro</li>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="over" id="over3">
+                            <div class="pop" id="pop3">
+                                <a href="#imag" class="cer" id="cer3"><i class="fas fa-times text-dark"></i></a>
+                                <h2>ASISTENCIA</h2>
+                                <p class="paraf">En caso de quemaduras de segundo grado se recomienda buscar atención medica ya que al recibir primeros auxilios podria generar complicaciones
+                                    pero para ayudar al accidentado puede realizar los siguientes pasos:
+                                    <li>Retirar cualquier objeto que esten en el area afectada ya sean ropa,joyas u otros ya que pueden seguir afectando a la piel</li>
+                                    <li>Coloca la zona afectada por la quemadura sobre abundante agua fresca, no tiene que ser fria</li>
+                                    <li>No aplicar hielo en el area afectada podria generar complicaciones</li>
+                                    <li>No intentar reventar las ampollas</li>
+                                    <li>Evita aplicar remedios caseros despues de la quemadura</li>
+                                    <li>Envolver la zona afectada con gasas y vendajes sin presionar</li>
+                                    <li>Es necesario consultar con un medico para realizar una observación y dar un tratamiento más adecuado</li>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="box">
-                        <div><img src="img/PRIM_AUX/quemaduras/tercergrado.jpg" alt="" width="100%"></div><a href="serviceDetails.html">
+                        <div><img src="img/PRIM_AUX/quemaduras/tercergrado.jpg" alt="" width="100%"></div>
                             <br>
                             <div class="slide-btn"><a class="mybtn" id="lee3" href="">Leer Contenido</a>
                             </div>
                             <h4 id="lee3t">Quemaduras de Tercer Grado</h4>
                         </a>
                         <p id="lee3p">
-                            Las quemaduras de tercer grado afectan las capas profundas de la piel, y también se llaman quemaduras de espesor total. Causan piel blanquecina, oscura o quemada. La piel puede estar adormecida, se debe a las llamas o contacto con la electricidad, mucho depende del tiempo en el que se expone.
-                       </p>
+                            Las quemaduras de tercer grado afectan las capas profundas de la piel, y también se llaman
+                            quemaduras de espesor total. Causan piel blanquecina, oscura o quemada. La piel puede estar
+                            adormecida, se debe a las llamas o contacto con la electricidad, mucho depende del tiempo en
+                            el que se expone.
+                            <br><button id="btn-abrir4" class="btn-pop">Síntomas</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="btn-abrir5" class="btn-pop">Asistencia</button>
+                        </p>
+                        <div class="over" id="over4">
+                            <div class="pop" id="pop4">
+                                <a href="#imag" class="cer" id="cer4"><i class="fas fa-times text-dark"></i></a>
+                                <h2>SÍNTOMAS</h2>
+                                <p class="paraf">Los síntomas que se presentan en las quemaduras de tercer grado son los siguientes:
+                                    <li>La piel puede quedar color oscuro, marron a causa de la quemadura</li>
+                                    <li>Es probable que la piel se vuelva coriácea (aspecto y contacto semejantes a los del cuero)</li>
+                                    <li>Puede llegar a destruir los nervios, tendones, musculos, vasos sanguineos</li>
+                                    <li>Ocaciona entumecimiento</li>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="over" id="over5">
+                            <div class="pop" id="pop5">
+                                <a href="#imag" class="cer" id="cer5"><i class="fas fa-times text-dark"></i></a>
+                                <h2>ASISTENCIA</h2>
+                                <p class="paraf">En caso de quemaduras de tercer grado se recomienda buscar atención medica lo mas antes posible, ya que 
+                                    es un aspecto delicado para realizar los protocolos de asistencia, lo que puede realizar es:
+                                    <li>Contactarse con la ambulancia o profesionales de salud inmediadamente</li>
+                                    <li>Conservar la calma en todo momento</li>
+                                    <li>Retirar objetos que afecten a la piel cuidadosamente mientras viene personal medico</li>
+                                    <li>Cubrir la zona con compresas o apositos y llevar al accidentado al centro u hospital mas cercano</li>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,10 +283,10 @@
                 <div class="col-md-6 col-lg-7">
                     <div class="widget2">
                         <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.04140587605!2d-68.22389598570861!3d-16.473440944409283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915ee0a6a4131fe3%3A0x192812a4a2c1f562!2sCentro%20de%20Salud%20Villa%20Cooperativa!5e0!3m2!1ses!2sbo!4v1634152030001!5m2!1ses!2sbo"
-                        class="container" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.04140587605!2d-68.22389598570861!3d-16.473440944409283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915ee0a6a4131fe3%3A0x192812a4a2c1f562!2sCentro%20de%20Salud%20Villa%20Cooperativa!5e0!3m2!1ses!2sbo!4v1634152030001!5m2!1ses!2sbo"
+                            class="container" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    
+
                 </div>
                 <div class="col-sm-6 col-lg-2">
                     <div class="widget3">
@@ -197,7 +294,7 @@
                         <ul>
                             <li><a href="index.html">Inicio</a></li>
                             <li><a href="">Nosotros</a></li>
-                            <li><a href="">contactos</a></li>
+                            <li><a href="/contact">contactos</a></li>
                             <li><a href="/chat">Asistente Virtual</a></li>
                             <li><a href="#">Privacidad</a></li>
                         </ul>
@@ -209,8 +306,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p>&copy; Copyright Todos los Derechos Reservados <a href="index.html"
-                                title="bootstrapmb"> Consultorio_Virtual_de_Primeros_Auxilios</a> 2022.</p>
+                        <p>&copy; Copyright Todos los Derechos Reservados <a href="index.html" title="bootstrapmb">
+                                Consultorio_Virtual_de_Primeros_Auxilios</a> 2022.</p>
                     </div>
                 </div>
             </div>
@@ -233,12 +330,12 @@
     <script src="js/dateandtimeactive.js"></script>
     <!--Main-->
     <script src="js/main.js"></script>
-        <!--artyom JS-->
-        <script src="js/artyom.js"></script>
-        <script src="js/artyom.window.js"></script>
-        <script src="js/artyom.window.min.js"></script>
-        <!--asistente JS-->
-        <script src="js/asistent/asistentequemadura.js"></script>
+    <!--artyom JS-->
+    <script src="js/artyom.js"></script>
+    <script src="js/artyom.window.js"></script>
+    <script src="js/artyom.window.min.js"></script>
+    <!--asistente JS-->
+    <script src="js/asistent/asistentequemadura.js"></script>
 </body>
 
 </html>

@@ -86,7 +86,7 @@ artyom.addCommands([
          }
     },
     {
-        indexes: ['tipos de quemaduras','qué hacer en caso de una quemadura','qué hago en caso de una quemadura','qué hago en caso de una quemadura menor','cómo procedo ante una quemadura de primer grado','qué hago en caso de una quemadura de primer grado','diferencia entre los tipos de grados de las quemaduras','deferencia entre los tipos de quemaduras'],
+        indexes: ['tipos de quemaduras','qué hacer en caso de una quemadura','como procedo ante una quemadura','qué hago en caso de una quemadura menor','cómo procedo ante una quemadura de primer grado','qué hago en caso de una quemadura de primer grado','diferencia entre los tipos de grados de las quemaduras','deferencia entre los tipos de quemaduras'],
         action: function(i){
             if (i==0){
                 artyom.say("existen quemaduras de primer grado de segundo grado y de tercer grado",{lang:"es-ES"});   
@@ -108,7 +108,7 @@ artyom.addCommands([
          }
     },
     {
-        indexes: ['tipos de hemorragias','qué son las hemorragias internas','qué es una hemorragia interna','qué son las hemorragias externas','qué es una hemorragia externa','qué hacer en caso de una hemorragia','qué hago en caso de una hemorragia','qué hago en caso de una hemorragia externa','cómo procedo ante una hemorragia externa','qué hacer en caso de una hemorragia externa'],
+        indexes: ['tipos de hemorragias','qué son las hemorragias internas','qué es una hemorragia interna','qué son las hemorragias externas','qué es una hemorragia externa','qué hacer en caso de una hemorragia','qué hago en caso de una hemorragia','qué hago en caso de una hemorragia externa','cómo procedo ante una hemorragia externa','qué hacer en caso de una hemorragia externa','qué hago en caso de una hemorragia interna'],
         action: function(i){
             if (i==0){
                 artyom.say("existen hemorragias internas y hemorragias externas",{lang:"es-ES"});   
@@ -128,6 +128,11 @@ artyom.addCommands([
                 artyom.say("Una vez haya cesado el sangrado realizar un vendaje compresivo para mantener aislado de bacterias",{lang:"es-ES"});
                 artyom.say("Se utiliza torniquete solo en caso de extremidades y cuando la compresion no es suficiente, se utiliza como ultimo recurso ya que tiene sus riesgos",{lang:"es-ES"});
                 artyom.say("por ultimo llevar a emergencias para un tratamiento adecuado",{lang:"es-ES"});
+            }
+            if(i==10){
+                artyom.say("En caso de una hemorragia interna",{lang:"es-ES"});
+                artyom.say("recueste a la persona en la postura de seguridad, por si producen vomitos y no le provoquen asfixia.",{lang:"es-ES"});
+                artyom.say("y luego proceda a llamar a personal medico o emergencias inmediatamente",{lang:"es-ES"});
             }
          }
     },

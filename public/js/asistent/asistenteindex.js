@@ -32,19 +32,25 @@ $('a#hemo').mouseout(function(){artyom.shutUp()})
 
 artyom.addCommands([
     {
-        indexes: ['Hola','buen día','buenos días','buenas tardes','buenas noches'],
+        indexes: ['Hola','buen día','buenos días','buenas tardes','buenas noches','gracias','consulta'],
         action: function(i){
             if (i==0){
-                artyom.say("Bienvenido dime que quiere hacer");   
+                artyom.say("Buenas, Bienvenido sea usted",{lang:"es-ES"});   
             }
             if (i==1 || i==2){
-                artyom.say("hola, buenos dias, como le puedo ayudar");   
+                artyom.say("buenos dias que desea consultar",{lang:"es-ES"});   
             }
             if (i==3){
-                artyom.say("hola, buenas tardes, como le puedo ayudar");   
+                artyom.say("buenas tardes que desea consultar",{lang:"es-ES"});   
             }
             if (i==4){
-                artyom.say("hola, buenas noches, como le puedo ayudar");   
+                artyom.say("buenas noches que desea consultar",{lang:"es-ES"});   
+            }
+            if (i==5){
+                artyom.say("de nada",{lang:"es-ES"});   
+            }
+            if (i==6){
+                artyom.say("digame en que puedo ayudarle",{lang:"es-ES"});   
             }
          }
     },
